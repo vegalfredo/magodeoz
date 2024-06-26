@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guion MAGO DE OZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .paragraph-container {
+            margin-bottom: 1px;
+        }
+        .typewriter-font {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .controls {
+            margin-top: 150px;
+        }
+        {
+        margin-top:0;margin-bottom: 0px; /* Ajusta este valor según lo corto que quieras que sea el interlineado */
+        }
+        .nav-button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 15px; /* Esquinas redondeadas */
+        }
+        .nav-button:hover {
+            background-color: darkviolet;
+        }
+        .inline-container {
+            display: block;
+            align-items: center;
+            margin-top: 50px;
+        
+            
+        }
+        .inline-container h2 {
+            display: block;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff; /* Cambia esto según tu diseño */
+            z-index: 1000;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin-top: 5px; /* Ajusta este valor según sea necesario */
+            margin-inline-start: 1%;
+            
+        }
+
+        .header h2 {
+            margin: 0; /* Elimina el margen predeterminado del encabezado */
+            /* Añade estilos adicionales según sea necesario */
+        }
+
+        .reload-button {
+        background-color: #ff5f6d;
+        background-image: linear-gradient(315deg, #fc00f8be 0%, #000000 74%);
+        color: white;
+        border: none;
+        padding: 12px 15px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 13px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        }
+        .reload-button:hover {
+        background-image: linear-gradient(315deg, #000000 0%, #fa07eacb 74%);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+        }
+        .reload-button:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        } 
+
+        /* Estilos para el menú hamburguesa */
+        .menu-container {
+            position: top;
+            top: 0px;
+            right: 20px;
+        }
+
+        .menu-button {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            height: 25px;
+            justify-content: space-between;
+        }
+
+        .menu-button div {
+            height: 4px;
+            background-color: #000;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .menu-content {
+            display: none;
+            flex-direction: column;
+            position: relative;
+            top: 35px;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .menu-content a {
+            padding: 10px 50px;
+            text-decoration: none;
+            color: #000;
+            transition: background-color 0.3s;
+        }
+
+        .menu-content a:hover {
+            background-color: #d0b3ff;
+        }
+
+        .menu-button.open .bar1 {
+            transform: rotate(-45deg) translate(-5px, 5px);
+        }
+
+        .menu-button.open .bar2 {
+            opacity: 0;
+        }
+
+        .menu-button.open .bar3 {
+            transform: rotate(45deg) translate(-5px, -5px);
+        }
+
+        .menu-content.open {
+            display: flex;
+        }
+
+        /* Media Queries para responsividad */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5em; /* Ajusta el tamaño del texto en dispositivos móviles */
+            }
+
+            .nav-button {
+                padding: 5px 10px; /* Ajusta el tamaño del padding en dispositivos móviles */
+                font-size: 0.9em; /* Ajusta el tamaño de la fuente en dispositivos móviles */
+            }
+               
+     
+
+                 
+    </style>
+
+    <link rel="icon" href="logo_escenario.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo_escenario.png">
+    <link rel="icon" sizes="192x192" href="logo_escenario.png">
+    <link rel="icon" sizes="512x512" href="logo_escenario.png">
+
+    <meta property="og:title" content="Guion MAGO DE OZ">
+    <meta property="og:description" content="Guion de: Mago de Oz a la Queretana">
+    <meta property="og:image" content="https://w7.pngwing.com/pngs/92/397/png-transparent-the-wizard-of-oz-the-wonderful-wizard-of-oz-the-wizard-of-the-emerald-city-the-emerald-city-of-oz-others-wizard-of-oz-wizard-of-the-emerald-city-oz-the-great-and-powerful-thumbnail.png">
+    <meta property="og:url" content="https://w7.pngwing.com/pngs/92/397/png-transparent-the-wizard-of-oz-the-wonderful-wizard-of-oz-the-wizard-of-the-emerald-city-the-emerald-city-of-oz-others-wizard-of-oz-wizard-of-the-emerald-city-oz-the-great-and-powerful-thumbnail.png">
+    <meta property="og:type" content="website">
+
+
+</head>
+        <!-- Inicio  y PRIMERA ESCENA ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ -->
+<body>
+    
+    <div class="header">
+        <h1>Un Mago de Oz a la Queretana</h1>
+        
+            
+        <!-- Aquí puedes agregar tus imágenes y botones -->
+        
+        <button class="reload-button" onclick="hardReload()">Actualizar</button>
+        <button class="nav-button" onclick="location.href='#escena_01'">E01</button>
+        <button class="nav-button" onclick="location.href='#escena_02'">E02</button>
+        <button class="nav-button" onclick="location.href='#escena_03'">E03</button>
+        <button class="nav-button" onclick="location.href='#escena_04'">E04</button>
+        <button class="nav-button" onclick="location.href='#escena_05'">E05</button>
+        <button class="nav-button" onclick="location.href='#escena_06'">E06</button>
+        <button class="nav-button" onclick="location.href='#escena_07'">E07</button>
+        <button class="nav-button" onclick="location.href='#escena_08'">E08</button>
+        <button class="nav-button" onclick="location.href='#escena_09'">E09</button>
+        <button class="nav-button" onclick="location.href='#escena_10'">E10</button>
+        <button class="nav-button" onclick="location.href='#escena_11'">E11</button>
+        <button class="nav-button" onclick="location.href='#escena_12'">E12</button>
+        <button class="nav-button" onclick="location.href='#escena_13'">E13</button>
+        <button class="nav-button" onclick="location.href='#escena_14'">E14</button>
+        <button class="nav-button" onclick="location.href='#escena_15'">E15</button>
+        <button class="nav-button" onclick="location.href='#escena_16'">E16</button>
+        <button class="nav-button" onclick="location.href='#escena_17'">E17</button>
+        <button class="nav-button" onclick="location.href='#escena_18'">E18</button>
+        <button class="nav-button" onclick="location.href='#Epílogo'">Epílogo</button>
+        <button class="nav-button" onclick="location.href='#Epílogo_02'">Epílogo_02</button>
+
+
+        <div class="menu-container">
+            <div class="menu-button" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="menu-content" id="menuContent">
+                <a href="escena_01_voz.html">Escena 01 Voces</a>
+                <a href="escena_02_voz.html">Escena 02 Voces</a>
+                <a href="escena_03_voz.html">Escena 03 Voces</a>
+                <a href="escena_04_voz.html">Escena 04 Voces</a>
+                <a href="escena_05_voz.html">Escena 05 Voces</a>
+                <a href="escena_06_voz.html">Escena 06 Voces</a>
+                <a href="escena_07_voz.html">Escena 07 Voces</a>
+                <a href="escena_08_voz.html">Escena 08 Voces</a>
+                <a href="escena_09_voz.html">Escena 09 Voces</a>
+                <a href="escena_10_voz.html">Escena 10 Voces</a>
+                <a href="escena_11_voz.html">Escena 11 Voces</a>
+                <a href="escena_12_voz.html">Escena 12 Voces</a>
+                <a href="escena_13_voz.html">Escena 13 Voces</a>
+                <a href="escena_14_voz.html">Escena 14 Voces</a>
+                <a href="escena_15_voz.html">Escena 15 Voces</a>
+                <a href="escena_16_voz.html">Escena 16 Voces</a>
+                <a href="escena_17_voz.html">Escena 17 Voces</a>
+                <a href="escena_18_voz.html">Escena 18 Voces</a>
+                <a href="epilogo_voz.html">Epigolo Voces</a>
+                <a href="epilogo_02_voz.html">Epigolo_02 Voces</a>
+            </div>
+        </div>
+        
+    
+    </div>
+
+    <div class="paragraph-container">
+        
+                   
+        <div class="controls">
+            
+            <br>
+            <p class="typewriter-font">Actualizado al 12/06/2024 a las 18:00 hrs. </p>
+            <p style="color:rgb(201, 5, 172);"class="typewriter-font">Opening con Canción Oh Fortuna & Suavecito</p>
+            <button onclick="playAudio('01 Openning Fortuna con Suavecito.mp3')">Reproducir</button>
+            <button onclick="stopAudio()">Detener</button>
+        <h2 id="escena_01">♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 01 - DOROTHEA Y SU FAMILIA</h2>
+        </div>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Entra Dorothy con canción de Anita la Huerfanita</p>
+            <button onclick="playAudio('02 Mañana - Anita la Huerfanita - SOLO MUSICA.mp3')">Reproducir</button>
+            <button onclick="stopAudio()">Detener</button>
+             
+        <br>
+        <br>
+        <p class="Arial"> <strong>DOROTHY:</strong>Seguro que hay sol mañana, vas a ver que pase lo que pase… sale el sol”. Buenos días señor sol, buenos días pajaritos, buenos días animalitos de la granja…</p>
+        <p class="typewriter-font">Al público</p>
+        <p class="Arial"> <strong>DOROTHY:</strong>cerditos, vaquitas, borreguitos… burritos, patitos… ¿Cómo amanecieron el día de hoy? Que bien se ve usted hoy señor pato</p>
+        <p class="typewriter-font">Improvisa con el público</p>
+        <p class="Arial"> <strong>DOROTHY:</strong>¿Dónde estarán mis tíos? Normalmente se levantan muy temprano… </p>
+        <p class="typewriter-font">Entra El Tío de Dorothy con canción de “El Rey León Duerme ya” del Rey León.</p>
+        <p class="Arial"> <strong>TÍO:</strong>Abumba wue… abumba wue… en la jungla tan imponente el León Rey duerme ya… en la jungla tan imponente el León Rey duerme,"no los oigo amigos"... ahiiiii… iiiiii abin babambue”</p>
+        <a class="typewriter-font">NALGADA</a>
+        <p class="Arial"> <strong>TÍO:</strong>¡Qué bien dormí hoy!, buenos días Dorothea… ¡Ay! ¡Qué hambre tengo!… podría comerme una cebra entera…</p>
+        <p class="Arial"> <strong>DOROTHY:</strong>Se acabaron las cebras… </p>
+        <p class="Arial"> <strong>TÍO:</strong>¿Antílopes? </p>
+        <p class="Arial"> <strong>DOROTHY:</strong> Nop… Pero tenemos, ¡gusanos y bichos!, Viscosos pero sabrosos…!!!</p>
+        <p class="Arial"> <strong>TÍO:</strong> “Aggh”, con que tu tía Juana insiste en cocinar eh?....</p>                                                <!-- Dorothy-->
+        <p class="Arial"> <strong>TIA MARGARA:</strong> ¡Ay! Buenos días…. No puedo creer que me quede dormida… ya son las 5:10 de la mañana… ya no alcanzare a ir a mi clase de Yoga… ¿Qué me habrá pasado? No dormía tanto desde que me tomaba las gotitas de Rivotril, ¿te acuerdas?</p>                                        <!-- Márgara-->
+        <p class="Arial"> <strong>TÍO:</strong>Sí… que extraño… ha de ser la luna… y el mercurio retrogrado… pero no te preocupes con que me hagas de desayunar todo está bien</p><!-- Tío-->
+        <p class="Arial"> <strong>TIA MARGARA:</strong>Pero quedamos que ahora tú ibas a hacer el desayuno los fines de semana.</p><!-- Márgara-->
+        <p class="Arial"> <strong>TÍO:</strong> Por favor… ¡Me lo has preparado los últimos cuarenta años! ¿Por qué ahora tenemos que cambiar…?</p><!-- Tío-->
+        <p class="Arial"> <strong>TIA MARGARA:</strong>Si, pero recuerda que ahora estamos en un mundo incluyente, donde la imagen estereotipada de la mujer preparando el desayuno al marido ya paso de moda, y además está muy mal vista.</p> <!-- Márgara-->
+        <p class="typewriter-font">carita de...¿lo dije bien?).</p>                                <!-- Linea de Acotacionesy-->
+        <p class="Arial"> <strong>TÍO: </strong>¡Ya no veas tanto Facebook!... ¡¡¡Luego porque uno las cambia por la hermana…!!!</p><!-- Tío-->
+        <p class="Arial"> <strong>TIA MARGARA: </strong>¡¿Qué dijiste?!</p><!-- Márgara-->
+        <p class="Arial"> <strong>TÍO: </strong>¡Que lo mismo dijiste la otra semana!</p><!-- Tío-->
+        <p class="Arial"> <strong>TIA MARGARA: </strong>Deja de estar diciendo eso, o mis amigas van a decir que eres un Tóxico, y estar con un tóxico me hará ver mal.<p><br><!-- Márgara--> 
+        <p class="typewriter-font">Entra Tía Juana, enamorada sexosa.</p>                                                 <!-- Linea de Acotacionesy--> 
+        <p class="Arial"> <strong>TIA JUANA: </strong>¡Ay sí!... ¡Es taaaaan tóxico!...</p>          <!-- Juana-->
+        <p class="Arial"> <strong>TIA MARGARA: </strong> ¡¿Qué?!</p>                                   <!-- Márgara-->
+        <p class="Arial"> <strong>TIA JUANA: </strong>Qué comí algo que me intoxico…</p>          <!-- Juana-->
+        <p class="Arial"> <strong>TIA MARGARA: </strong> ¡Ay Juana! Te he dicho que no cocines, siempre que cocinas nos cae mal.</p> <!-- Márgara-->
+        <p class="Arial"> <strong>TÍO: </strong> Bueno… entonces ¿Esta el desayuno o no?</p>                                                <!-- Tío-->
+        <p class="Arial"> <strong>TIA JUANA: </strong>Si quieres yo te hago tus huevitos...</p>          <!-- Juana-->
+        <p class="Arial"> <strong>DOROTHY: </strong>Pero ya tengo el desayuno listo. Lo hice especial para ustedes.</p>      <!-- Dorothy-->
+        <p class="Arial"> <strong>TÍO: </strong> No, no, que me lo haga tu tía Juana otra vez, me gusta cómo me hace los huevitos.</p>
+        <p class="Arial"> <strong>TIA MARGARA: </strong>No te preocupes Dorothy yo sí quiero tu desayuno de hotcakes Keto y licuado de avena sin gluten.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>Y por cierto, ya no tienen que preocuparse por darle de comer a los animalitos de la granja, ya los alimente.</p>
+        <p class="Arial"> <strong>TIA MARGARA: </strong>Muchas gracias hija… que bueno es tenerte aquí con nosotros.</p>
+        <p class="Arial"> <strong>TÍO: </strong>¡Sí! Somos una familia muy unida… Qué bueno que tus papas decidieron dejarte aquí con nosotros….</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>Y por cierto, ya no tienen que preocuparse por darle de comer a los animalitos de la granja, ya los alimente.</p>
+        <p class="Arial"> <strong>TIA MARGARA: </strong> Muchas gracias hija… que bueno es tenerte aquí con nosotros.</p>
+        <p class="Arial"> <strong>TIO: </strong> ¡Sí! Somos una familia muy unida… Qué bueno que tus papás decidieron dejarte aquí con nosotros…</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Pero mis padres murieron.</p>
+        <p class="Arial"> <strong>TIO: </strong> Ahh… pero qué bueno que te dejaron… pero que mal que murieron. Lo siento mucho, mi más sincero pésame.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Gracias tío… pero eso fue hace seis años…</p>
+        <p class="Arial"> <strong>TIO: </strong> Ahh… sí, sí… Pero lo sigo sintiendo.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Por cierto, tíos… voy a ir al centro a hacer compras y pasear con mi elote con chile del que no pica para ver si consigo novio. ¿Gustan algo?</p>
+        <p class="Arial"> <strong>TIA JUANA: </strong> Pues si encuentras dos novios me guardas uno.</p>
+        <p class="Arial"> <strong>TIO: </strong> Si quieres yo te lo guardo, y al novio también…</p>
+        <p class="Arial"> <strong>TIA MARGARA: </strong> Con cuidado mijita, si te encuentras a las brujas de las renteras esas hermanas Alcocer, ahí les inventas un cuento chino, y les dices que pronto les llevamos la renta, ¿sí?</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Claro tía… ya me voy. ¡Adiós! ¡Los quiero!</p>
+        <p class="Arial"> <strong>LOS 3 TIOS: </strong> ¡Adiós! ¡Cuídate!</p>
+        <p class="Arial"> <strong>TIO: </strong> Que buena muchacha es esa Dorothea… ¿Entonces quienes era sus papás?</p>
+        <p class="Arial"> <strong>TIA JUANA: </strong> ¿Cómo que quién? ¡Pues tú hermano!</p>
+        <p class="Arial"> <strong>TIO: </strong> ¡Ah Caray!, ¡¿Se murió mi hermano?!</p> <p class="typewriter-font">Salen.</p>     <!-- Linea de Acotacionesy-->
+
+        <h2 id="escena_02">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 2 - BONJOUR</h2>
+        </div>
+
+
+        <p class="Arial"> <strong>DOROTHY: </strong> Ohh… Ojalá que hoy sea un día especial, que algo importante pase, estoy aburrida de que siempre sea lo mismo… </p>
+                    Quiero aventuras que al mundo asombren<br>
+                    un gran amor quiero encontrar,<br>
+                    Que feliz a mi vendrá, <br>
+                    Que me entienda de verdad <br>
+                    Quiero mucho más que un simple plan<br><br>
+
+                    Algo me dice que hoy será el día en que algo especial pasará… quizás un tornado o algo así. Por qué en Querétaro cada día es igual… sus manifestaciones en el centro, el tráfico en 5 de Febrero… conciertos gratis en el Jardín Guerrero y Teatros independientes vacíos… <br><br>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Empieza Pista Canción Bella - PRIMERA PARTE"</p>
+
+        <video width="450" controls>
+            <source src="03 Bonjour con SUBTITULOS de COLORES con Personajes.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video><br><br>
+        
+
+        Qué lugar, simple y aburrido<br>
+        Siempre es como el día anterior<br>
+        Qué lugar sólo gente simple que despierta así…<br><br>
+        <p class="Arial"> <strong>PANADERA TRINI: </strong> ¡Bonjour! </p>
+        <p class="Arial"> <strong>ARISTÓCRATA MIGUEL: </strong> ¡Bonjour! </p>
+        <p class="Arial"> <strong>PANADERO VEGA: </strong> ¡Bonjour! </p>
+        <p class="Arial"> <strong>ARISTÓCRATA MARIEL: </strong> ¡Bonjour! </p>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong> ¡Bonjour! </p>
+
+        <p class="Arial"> <strong>DOROTHY: </strong></p> Ahí viene el panadero como siempre,<br>
+                su mismo pan viene a vendeeer,<br>
+                Las mañanas siempre igual,<br>
+                desde el día en que llegué<br>
+                a este rústico lugaaar<br>
+
+        <p class='Arial'> <strong>NIÑAS: </strong> Buenos días, Dorothea.: </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Buenos días, niñas!, ¿a dónde van?, ¿a la escuela?: </p>
+        <p class='Arial'> <strong>NIÑAS: </strong>  A las gorditas, pedimos cinco de migaja con una coca… y veremos TikToks prohibidos.: </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Maravilloso!, suerte con eso…: </p>
+        <p class='Arial'> <strong>PANADERA TRINI: </strong> Mira, ahí va esa chica tan extraña…: </p>
+        <p class='Arial'> <strong>ARISTÓCRATA MIGUEL: </strong> Es distraída como veces: </p>
+        <p class='Arial'> <strong>PANADERO VEGA: </strong> No es de nuestra sociedad,: </p>
+        <p class='Arial'> <strong>ARISTÓCRATA MARIEL: </strong> En las nubes siempre está: </p>
+        <p class='Arial'> <strong>PUEBLO TODOS: </strong> ¡¡¡No hay duda de que una chica rara eeees…!!!: </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Bonjour, buen día, ¿Qué tal tus tíos?: </p>
+        <p class='Arial'> <strong>HOMBRE DE OJALATA: </strong> Bonjour, que tal, ¿cómo te va?: </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Quiero, tomar… hoy con tu tío: </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Yo quiero más que vida provinciaaaaaaal!: </p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Termina Pista Canción Bella (PRIMERA PARTE)."</p>
+
+
+
+        <br>
+        <p class="Arial"> <strong>PEDRO: </strong> ¡Viene el Lobo! ¡Corran todos! ¡Viene el lobo a comerse a todos!</p>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong> ¡Corran! ¡Corran! ¡AAAAAAHH!</p>
+        <p class="Arial"> <strong>ARISTÓCRATA MARIEL: </strong> ¡Mujeres y ancianos primero!</p>
+        <p class="Arial"> <strong>PANADERO VEGA: </strong> ¡No! ¡Hay que ser incluyentes!, ¡Los hombres también!</p>
+        <p class="Arial"> <strong>PANADERA TRINI: </strong> ¡Alguien piense en las criaturas!</p>
+        <p class="typewriter-font">Salen todos.</p>
+        <p class="Arial"> <strong>PEDRO: </strong> ¡Jaja! ¡se la creyeron!</p>
+        <p class="typewriter-font">Salen.</p>
+
+        <h2 id="escena_03">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 3 - LAS RENTERAS</h2>
+        </div>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido de: "Campana de Iglesia"</p>
+        <button onclick="playAudio('04 Sonido de Campana de Iglesia Misa.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+
+        <br>
+        <br>
+        <p class="Arial"> <strong>ROSARIO: </strong>¡Ay! que olor tan desagradable… huele horrible…</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Ah sí… huele como a caño… como a metro …</p>
+        <p class="Arial"> <strong>LAS DOS: </strong>Como a … ¡¡¡chilango!!!</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Mira una Iglesia…</p>
+        <p class="typewriter-font">Se persignan.</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido de: "Campana de Iglesia"</p>
+        <button onclick="playAudio('04 Sonido de Campana de Iglesia Misa.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Oye hay que ir a la Mariposa por algo nuevo…</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>¡Si! Se me antoja un volteado de Piña</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>¡¡Ay sí!! ¡Qué delicia!</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Oye y los naquitos estos… los chilangos… ¿ya te pagaron la renta?</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>¡No!, ¡Ya deben como 3 meses!</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Que esperabas Son chilangos… Yo te dije  “para que andas aceptando chilangos”</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Es que estos tenían cara de que sí se bañaban.</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>¡Ay mira otra Iglesia!</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido de: "Campana de Iglesia"</p>
+        <button onclick="playAudio('04 Sonido de Campana de Iglesia Misa.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <p class="typewriter-font">Se persignan luego entra Dorothy Cantando.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>¡Yo quiero más que vida provinciaaaaaaal!</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>¿Ya viste quien está ahí?</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>¡Es la Dorothea!</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>¡Ay! Así se llamaba la gata de mi vecina</p>
+        <a class="typewriter-font">ríen.</a>
+        
+        <p class="Arial"> <strong>DOROTHY: </strong>¡Oigan aquí estoy!, ¡Las estoy escuchando!</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Ay bueno… ¿y cómo estás?</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>Bien…</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Repuestita…</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Gorda…</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Sí se le ven varias lonjas…</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Mira ya se le ve pancita…</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>¡Aquí sigo!, ¡Las estoy escuchando!</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Ah sí… te ves muy bien he…</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Y tus tíos ¿cómo están?</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>Bien… Pues ya saben, algo enfermos… que la influenza, que el COVID, ¡que el moquillo…!</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>¡Giuuuu!</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Solo recuérdales que nos paguen la renta…</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Pero si quieren por transferencia también se las aceptamos.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>Sí, yo les digo…</p>
+        
+        <p class="Arial"> <strong>PEDRO: </strong>¡Viene el COVID!, ¡Corran todos!, ¡Viene el COVID otra vez!</p><br>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong>¡Corran! ¡Corran! ¡AAAAAAHH!</p>
+        <p class="Arial"> <strong>ARISTÓCRATA MARIEL: </strong>¡Mujeres y ancianos primero!</p>
+        <p class="Arial"> <strong>PANADERO VEGA: </strong>¡No! ¡Hay que ser incluyentes!, ¡Los hombres también!</p>
+        <p class="Arial"> <strong>PANADERA TRINI: </strong>¡Alguien piense en las criaturas!</p>
+        
+        <p class="typewriter-font">Salen todos.</p><br>
+        <p class="Arial"> <strong>PEDRO: </strong>¡Jaja! ¡se la creyeron!</p>
+        <p class="typewriter-font">Sale.</p><br>
+        <p class="Arial"> <strong>ROSARIO: </strong>¡Corre Cleotilde!</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>Sí… ¡vamos al hospital a hacernos una prueba!</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>Sí, hay que ir al hospital más barato y cercano…</p>
+        <p class="Arial"> <strong>CLOTILDE: </strong>¡Al Ángeles!</p>
+        <p class="Arial"> <strong>ROSARIO: </strong>No… mejor al San José.</p>
+        <p class="Arial"> <strong>LAS DOS: </strong>Adiós.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong>¡Adiós!</p>
+
+        <h2 id="escena_04">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 4 - AHÍ VIENE EL TORNADO</h2>
+        </div>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Empieza Pista Canción Bella - SEGUNDA PARTE"</p>
+
+        <video width="450" controls>
+            <source src="03.5 Bonjour con SUBTITULOS de COLORES con Personajes 2DA PARTE.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video><br><br>
+
+
+        <p class="Arial"> <strong>DOROTHY: </strong>¡Ay! Por gente como ellas es que quiero irme de aquí, buscar un lugar como Canadá, Australia o Catemaco… dónde todo sea posible… Tierras lejanas, duelos, hechizos mágicos, el príncipe...</p>
+        <p class="Arial"> <strong>PANADERA TRINI: </strong> Mira, ahí va esa chica tan distinta</p>
+        <p class="Arial"> <strong>ARISTÓCRATA MIGUEL: </strong> ¿Quién sabe cuál es su interés? </p>
+        <p class="Arial"> <strong>PANADERO VEGA: </strong> En los sueños vivirá </p>
+        <p class="Arial"> <strong>ARISTÓCRATA MARIEL: </strong> Con sus libros siempre está </p>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong> Un misterio para todos ella eeeees… </p>
+
+        <p class="Arial"> <strong>DOROTHY: </strong></p>
+            Oooooigan mi favorita <br>
+            Cuando ella encuentra<br>
+            amor<br>
+            al fin <br>
+            Él, un gallardo príncipe<br>
+            <p class="typewriter-font">Empujan a Vega para que Baile con Dorothea.</p>
+            Y ella lo descubre<br>
+            hasta que llega el final<br><br>
+        
+        <p class="Arial"> <strong>PANADERA TRINI: </strong>Es tan hermosa como indica el nombre </p>
+        <p class="Arial"> <strong>ARISTÓCRATA MIGUEL: </strong>De la cabeza hasta los pies </p>
+        <p class="Arial"> <strong>PANADERO VEGA: </strong> Sólo ven su linda faz </p>
+        <p class="Arial"> <strong>ARISTÓCRATA MARIEL: </strong> Más me temo que detrás </p>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong> Diferente de nosotros eeees…  No es como todos los demás… ¡Muy diferente de nosotros eeeeeees!</p><br>
+
+        <p class="Arial"> <strong>PEDRO: </strong>¡Viene un tornado! ¡Corran todos! ¡Viene un tornado!</p>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong>No le hagan caso… Pedro siempre nos miente, con sus bromas pesadas.</p>
+        <p class="Arial"> <strong>PEDRO: </strong>¡Pero esta vez es real! ¡Ahí viene un tornado! ¡Volteen y lo verán!</p>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong>Si claro, voltearemos y te burlaras de nosotros… ya no caeremos.</p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido de: "Tornado, lluvia, truenos"</p>
+        <button onclick="playAudio('05 Efecto Tornado con Truenos Final.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+        <p class="Arial"> <strong>PEDRO: </strong>¡Pero!.. ¡Aaaahhh!</p>
+        <p class="Arial"> <strong>PUEBLO TODOS: </strong>¡¡¡Tornadoooo!!! ¡Ahhh!</p>
+        <p class="Arial"> <strong>PANADERA TRINI: </strong>¡Alguien piense en las criaturaaaaaas!</p>
+        <p class="typewriter-font">Se los lleva el tornado, se colocan las máscaras de Muchkins, los que seamos muchkins, Trini y Angy se caracterizan como Hadas.</p>
+
+
+        <h2 id="escena_05">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 5 - LOS MUNCHKINS Y  LA MUERTE DE LA BRUJA</h2>
+        </div>
+
+        <p class="Arial"> <strong>MUNCHKINS: </strong> ¡La mato! ¡La mato! ¡La mato!</p>
+        <p class="Arial"> <strong>MUSHKIN VEGA: </strong> ¡¡La matastes toda!!</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Nooo... fue él…</p>
+        <p class="typewriter-font">Señala a alguien del público.</p>
+        <p class="Arial"> <strong>MUNCHKINS: </strong> ¡Nos salvastes estamos agradecidos!, ¡Nos has salvado estamos agradecidos!</p>
+        <p class="Arial"> <strong>MUSHKIN VEGA: </strong> ¡Nos salvastes a todos!</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Ah…  sí, ¡Fui yo!</p>
+        <p class="typewriter-font">Patea a la bruja en las piernas.</p>
+        <p class="Arial"> <strong>MUNCHKINS: </strong> ¡¡Heeee!!</p>
+        <p class="typewriter-font">Patea a la bruja en la panza.</p>        
+        <p class="Arial"> <strong>MUNCHKINS: </strong> ¡¡Heeee!!</p>
+        <p class="typewriter-font">Esta por patear a la bruja en la cabeza.</p>
+        <p class="Arial"> <strong>MUNCHKINS: </strong> ¡¡Nooooo!!</p>       
+        <p class="Arial"> <strong>MUSHKIN VEGA: </strong> ¡Que Manchada…!</p>
+        <p class="Arial"> <strong>HADA SHAVASANA: </strong> Yo soy el Hada Shavasana del Campanario.</p>
+        <p class="Arial"> <strong>HADA GLINDA: </strong> Y yo soy el Hada Glinda de Vista Real.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Ah… yo soy Dorothy… del Tepe.</p>
+        <p class="Arial"> <strong>HADA SHAVASANA: </strong>  Tú has matado a la Bruja mala del oriente</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> ¿Bruja mala del oriente? ¡Ahhh! Menchaca!!</p>
+        <p class="Arial"> <strong>HADA GLINDA: </strong> ¿De qué hablas? ¡¡Esto es el gran mundo de Oz!!</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> ¿Qué no estamos en Querétaro?</p>
+        <p class="Arial"> <strong>HADA SHAVASANA: </strong> No…bueno, cerca, pero más alto. ¡Más allá de las nubes!</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Ah pero entonces aquí no es mi casa… mis tíos van a estar preocupados por mí… ¿y ahora como le hago para regresar a casa…? ¿Dónde tomo la ruta?</p>
+        <p class="Arial"> <strong>HADA GLINDA: </strong> Toma… son los zapatos de la Bruja mala del oriente.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> ¡Wuooo wuooo! ¡¿la estas Chacaleando?! ¡Cuiden sus carteras!</p>
+        <p class="Arial"> <strong>HADA SHAVASANA: </strong> No no, son un  tributo por ayudarnos a librarnos de la Malvada Bruja del Oriente.</p>
+        <p class="Arial"> <strong>HADA GLINDA: </strong> Así es, ella ya está muerta… no los necesitará.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Ah, pues así, pues si… ¡Ohhh! Zapatos mágicos… ¡Prada! ¡Oh! ¡Se me ven bien!, ojalá no me aprieten tanto el Juanete…</p>
+        <p class="Arial"> <strong>HADA SHAVASANA: </strong> Ahora lo único que tienes que hacer es seguir el camino amarillo, por allá.</p>
+        <p class="typewriter-font">Hace señal "corte de manga" en doble sentido.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> No entendí bien… ¿Por allá?</p>
+        <p class="typewriter-font">Hace señal "corte de manga" en doble sentido.</p>
+        <p class="Arial"> <strong>HADA SHAVASANA: </strong> No… ¡por allá! ¡el camino amarillo!</p>
+        <p class="typewriter-font">Hace señal "corte de manga" en doble sentido.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Ah el camino amarillo</p>
+        <p class="typewriter-font">Hace señal "corte de manga" en doble sentidohacia muschkin Vega).</p>
+        <p class="Arial"> <strong>MUSHKIN VEGA: </strong> ¡Ora, Ora!, si no puedes, ¡no repartas!</p>
+        <p class="Arial"> <strong>HADA GLINDA: </strong> Si sigues el camino amarillo podrás llegar a la ciudad Esmeralda, y encontrar ahí al gran Mago de Oz… él te ayudara a cumplir todos tus deseos, incluso el de volver a casa.</p>
+        <p class="Arial"> <strong>HADA SHAVASANA: </strong> Pero ten mucho cuidado, con la Malvada bruja del Poniente… es muy mala y le gusta hacer el musical de Wicked.</p>
+        <p class="Arial"> <strong>DOROTHY: </strong> Oh… si suena peligroso… Muchas gracias por todo. Seguiré el camino amarillo entonces. ¡Gracias!</p>
+        <p class="Arial"> <strong>TODOS: </strong> ¡Adiós!</p>
+        <p class="Arial"> <strong>MUSHKIN VEGA: </strong> ¡Adiós toda tú!,¡uy!…no creo que dure mucho.</p>
+        <p class="typewriter-font">Salen.</p>
+
+        <h2 id="escena_06">♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 6 - EL ESPANTAPAJAROS</h2>
+        </div>
+
+        <p class='typewriter-font'>ESPANTAPAJAROS atado al poste- Dorothy entra cantando una de Bronco</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> “Con zapatos de tacón, las brujas se ven mejor, que con zapatos de piso” </p>
+        <p class='typewriter-font'>Voltea y ve al ESPANTAPAJAROS y grita asustada</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Ahhhhh!!!, Ahhhhh!!! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Espera, espera!, cuando termines de gritar, ¿podrías desatarme? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Por qué estas atado? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Larga historia!, te lo explico en 3 palabras,  “novia, tóxica y fantasía sexual” </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Pero esas son 4! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Ah cierto, perdón, es que no tengo cerebro, ¿me vas a desatar o no? </p>
+        <p class='typewriter-font'>Lo desata</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Esta bien… ¿Qué eres? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿Que eres tú?, ¿eres un cuervo? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡No!, ¿eres un ratero? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡NO! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Eres un cobrador de Coppel? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ehhhh ¡NO! </p>
+        <p class='typewriter-font'>Le da una fumada a su churrito</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong>¿Quién es Coppel?</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Ya sé… eres un ¡Marihuano! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Depende </p>
+        <p class='typewriter-font'>Le da una fumada a su churrito</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡¿Depende?! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿Eres policía? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No, no soy Policía, soy Dorothy, adolescente, influencer y virgen </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Ooooooookeeeeey….!!! ¿Y qué quieres? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> a ¡Ryan Gosling! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿Qué? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Regresar a casa… voy siguiendo el camino amarillo, para llegar a ciudad Esmeralda, donde el mago de Oz, me ayudará a regresar. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Worales de cual te ¿fumaste?! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Quieres Venir conmigo? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Eso suena a que es una buena idea, pero no lo sé, es que no tengo cerebro. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Ahhh entonces eres Diputado Plurinominal </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Abrazos no balazos…. </p>
+        <p class='typewriter-font'>abraza a Dorothy y hace un ruidito de abrazo</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Oh, que haces? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Agg como que me dio asquito… la verdad soy Artista </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Ahhh ¿artista? </p>
+        <p class='typewriter-font'>hace aspavientos con sus brazos</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Sí, ¡artista! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Ahhh artista!!, ¿bueno entonces me acompañas en este viaje? </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">comienza la melodía de Song Gary Glitter</p>
+        <button onclick="playAudio('06 Musica del Jocker para Baile ESPANTAPAJAROS.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+                
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿Viaje?!!!, va jálo…. </p>
+        <p class='typewriter-font'>ESPANTAPAJAROS comienza a bailar como el Jocker  cuando baja las escaleras</p>
+        <p class='typewriter-font'>otra fumada a su churrito, se apagan las luces, salen</p>
+            
+
+        <h2 id="escena_07">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 7 - EL HOJALATA</h2>
+        </div>
+
+        <p class='typewriter-font'>HOJALATA entra a escena y toma posición</p>
+        <p class='typewriter-font'>Entra Dorothy con el ESPANTAPAJAROS cantando la canción de Somewhere over the Rainbow</p>
+        <p class='typewriter-font'>Mientras cantan abrazan al HOJALATA</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡AYUUUUUUDA! </p>
+        <p class='Arial'> <strong>DOROTHY y ESPANTAPAJAROS: </strong> ¡¡¡ahhh…!!! </p>
+        <p class='typewriter-font'>Se alejan del hombre corriendo</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡AYUUUUUUDA! </p>
+        <p class='Arial'> <strong>DOROTHY y ESPANTAPAJAROS: </strong> ¡¡¡ahhh…!!! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡PASENME PAPEL!, QUE DIGA, ACEEEEITE..!!! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Como que habló… ¿Quiere comernos? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> No…, más bien creo que… esta oxidado, y nos está señalando el aceite, para que lo ayudemos a ponérselo y poderse mover. Pero no estoy seguro, ya vez que no tengo cerebro. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No… Yo creo que esta oxidado, y nos está señalando el aceite, para que lo ayudemos a ponérselo y poderse mover. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Oohhh claro, ¡Eres muy lista! Que padre ha de ser tener cerebro. Yo como no tengo, nunca lo hubiera pensado. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Hay que ayudarlo! </p>
+        <p class='typewriter-font'>Hombre hojalata hace movimientos bruscos</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">efecto sondio de metal rechinando</p>
+        <button onclick="playAudio('14 sonido de columpio oxidado.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+        <p class='Arial'> <strong>DOROTHY y ESPANTAPAJAROS: </strong> Ahhhhhh </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Qué estás haciendo? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡PERDÓN, ESTOY MUUUUY OXIDADO! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Bueno, pero no hagas tanto ruido, nos espantas, mejor no te muevas </p>
+        <p class='typewriter-font'>Con una tetera le ponen aceite al HOJALATA quien al final termina por arrebatarles la tetera y beberse el resto de aceite directo de esta.</p>
+        <p class='typewriter-font'>Llorando</p>
+        <p class='Arial'> <strong>HOJALATA: </strong>¡SE FUEEEEEE! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Oh no, ¿por qué lloras? No llores, te vas a oxidar. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Es que ella me ROMPIÓ el corazón! </p>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">comienza la canción de: Ay ME ROBO EL CORAZÓN</p>
+        <button onclick="playAudio('07 Ay Me rompió el corazón el lloron (PARTE).mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+        <p class='Arial'> <strong>DOROTHY: </strong> Ahh tienes problemas de romance… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Seguramente tienes problemas de apego, dime ¿crees que tengas apego evitativo o a apego ansioso? ¿Tienes problemas para compartir tus sentimientos o piensas que todo mundo te va a traicionar y a abandonar?, ¿Tú de cuál tienes? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Ninguno, literal me robo el corazón </p>
+        <p class='typewriter-font'>les muestra su interior</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Giuu! Tapate, tapateeeee… oh literal sí te robo el corazón. ¿Por qué no vienes con nosotros?, vamos a ir a ver al mago de Oz, me ayudará a regresar a casa… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Y a mí me ayudará a tener un cerebro, ya que sin un medio que me permita tener conexiones sinápticas no puedo pensar, y si no puedo pensar, no puedo…. pues PENSAR.  </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Y a mí, ¿me podrá regresar mi corazón? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Sí…! seguro sí </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿Y a mí amada? ¿Ah aquella que se robó mi corazón? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> No mira…, ¿Cómo te lo explico? esas no conviene que regresen… mira, primero te dicen que todo está bien y siempre terminan en el Juzgado número nueve de lo familiar, haya por el centro expositor y es un relajo. </p>
+        <p class='typewriter-font'>Mientras van bajando el tono de voz hasta que ya no se escucha</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡¡¡Oigan…!!!  ¡hay que creer en el amor, con comunicación todo se puede! Eso dicen en Instagram, y si Instagram lo dice ¡debe ser cierto! </p>
+        <p class='typewriter-font'> Salen</p>
+
+
+        <h2 id="escena_08">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 8 - EL LEÓN</h2>
+        </div>
+
+
+        <p class='typewriter-font'>Dorothy, ESPANTAPAJAROS y el HOJALATA van siguiendo el camino amarillo...</p>
+        <p class='typewriter-font'>pero de pronto entran al bosque Menchaca, donde el León “ñero”, los quiere asaltar...</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Pero qué parte más tenebrosa del camino amarillo, donde estaremos? </p>
+        <p class='typewriter-font'>con tonito de misterio y miedo</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> No me crean mucho, ya ven que no tengo cerebro, pero me parece que estamos en el “bosque prohibido de Menchaca 4” </p>
+        <p class='typewriter-font'>con el mismo tonito de misterio y miedo</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Sí…  dicen que, en las noches de luna llena, cuando todos yacen dormidos, se logra escuchar… </p>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">efecto Sonido Fierros Viejos que Vendan"</p>
+        <button onclick="playAudio('08 Fierro viejo que vendan.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+        <p class='Arial'> <strong>DOROTHY: </strong> En ese caso, más vale que apresuremos el paso, no nos vaya a salir el MAYNEZ y nos dedique una de sus sonrisas… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> O que nos salga XÓCHITL y nos quiera robar nuestras tesis universitarias… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> o peor aún, ¡Que se aparezca SHEINBAUM y nos arrojé a la cabeza un vagón del metro! </p>
+        <p class='typewriter-font'>Continúan caminando, Leon aparece por sorpresa al grupo</p>
+        <p class='Arial'> <strong>LEON: </strong> Gihj Gihj, Gihj </p>
+        <p class='typewriter-font'>Intenta gruñir, pero le sale muy ternurita</p>
+        <p class='typewriter-font'>con tono ñero, parece amenazador, pero sin mucho éxito, navaja en mano</p>
+        <p class='Arial'> <strong>LEON: </strong> ¡Cámara mi gente ya se la saben, celulares y carteras, joyería y relojes, todo en la bolsita!</p>
+        <p class='typewriter-font'>Los 3, hacen breve silencio, se ven entre ellos y sueltan una carcajada</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Es en serio?, ¿esa es la mejor frase que tienes para intimidarnos?, ¿quién eres? </p>
+        <p class='typewriter-font'>Intenta gruñir, pero le sale muy ternurita</p>
+        <p class='Arial'> <strong>LEON: </strong> Gihj Gihj, Gihj </p>
+        <p class='Arial'> <strong>DOROTHY, HOJALA Y ESPANTAPAJAROS </strong> Awwwww, que tieeeerno… </p>
+        <p class='typewriter-font'>Intenta gruñir, pero le sale muy ternurita otra vez</p>
+        <p class='Arial'> <strong>LEON: </strong> Gihj Gihj, Gihj </p>
+        <p class='Arial'> <strong>DOROTHY, HOJALA Y ESPANTAPAJAROS </strong> Awwwww, mi vidooo, que tiernooo </p>
+        <p class='typewriter-font'>León se acicala como gatito</p>
+        <p class='Arial'> <strong>LEON: </strong> “Chiaaaaaaa” que nos los asuste?!, pus si soy el Leon-oh, de “Menea” </p>
+        <p class='typewriter-font'>Con tono de Erudito o sabio o letrado</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Dirás el León de “NE-MÉ-A”, en la mitología griega, era un temible monstruo que azotaba a los habitantes de Neméa, quien al final fue derrotado por el mismísimo Semidios, Hercules </p>
+        <p class='Arial'> <strong>LEON: </strong> Ni niguas dijo Popochas, soy el León de “Me-ne-a”, porque… </p>
+
+
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Canción se menéa, se menéa</p>
+        <button onclick="playAudio('15 Se Menea (parte).mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <p class="typewriter-font">Leon comienza a cantar y a bailar la canción de “Se menea la cadera, la cadera se Menea”, los demás le siguen el bailecito</p>
+        <p class='typewriter-font'>esperar  20 segundos exactamente luego de iniciado el efecto de "SE MENEA"</p>
+        <p class='typewriter-font'> ESPANTAPAJAROS entra en razón y grita y se detienen todos</p><br>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Hey, Hey! ,¡basta, basta!, aquí el que no tiene cerebro ¡soy Yo!, En este grupo, ¡No puede haber dos sin cerebro León! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No quisiéramos herir tus sentimientos leoncito, pero la verdad no nos espantaste. </p>
+        <p class='Arial'> <strong>LEON: </strong> ¿Ni siquiera poquito? </p>
+        <p class='Arial'> <strong>TODOS: </strong> ¡NO! </p>
+        <p class='typewriter-font'>León se acicala como gatito</p>
+        <p class='Arial'> <strong>LEON: </strong> Chiaaaa.. es que la neta, la neta la neta, me falta coraje, me falta valor, siempre soy bien miedoso, soy tan miedoso, tan miedoso, que aunque ya cumplí los 40, aun no voy a hacerme la prueba de la próstata… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿Por miedo a que te vaya a doler? </p>
+        <p class='typewriter-font'>Suelta el zarpacito Sexy</p>
+        <p class='Arial'> <strong>LEON: </strong> No, por miedo que me vaya ¡a gustar! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> En ese caso, únete a nuestro contingente, vamos siguiendo el camino amarillo para llegar a la ciudad Esmeralda, donde habita el mago de Oz, quien le dará un corazón al HOJALATA, un cerebro a ESPANTAPAJAROS y a mí, me ayudará a regresar a casa, para ti le pediremos coraje y valor. </p>
+        <p class='Arial'> <strong>LEON: </strong> ¡Perfecto! Con coraje y valor seré más eficiente para asaltar, autobuses, peatones, robo a domicilios y negocios… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡No! Coraje y Valor para enfrentar la vida de forma decente, consiguiendo un trabajo honrado… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Una familia… Leoncitos y una Leona. </p>
+        <p class='Arial'> <strong>LEON: </strong> Leona? Dijiste….”Leona?” </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Música de "Reyna Leona" de Steman y TODOS bailamos la coreografía del siguiente video al mismo tiempo que suena</p>
+        <p class='typewriter-font'>ENSAYAR LOS PASOS SOLO DOROTHY, HOJALATA, ESPANTAPAJAROS Y LEON</p>
+        
+        <video width="450" controls>
+            <source src="07 Esteman - Reina Leona para BAILE.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video><br><br>
+
+        <p class='Arial'> <strong>DOROTHY: </strong> Con valor y coraje, podrás lograr ser tu mejor versión, y podrás ser quien tú quieras ser. </p>
+        <p class='Arial'> <strong>LEON: </strong> ¡Ah ya! Como Barbie… hmm hmm, que diga, yo quisiera ser como el Henry Cavil… ese si no le tiene miedo a nada. ¿El Mago de Oz podrá lograr eso? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Estoy segura de que sí. </p>
+
+
+        <p class='Arial'> <strong>LEON: </strong> Pues en ese caso voy con ustedes...  “vamos al camino” </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font"> Suena canción de Beyoncé - Single Ladies</p>
+        <p class='typewriter-font'> Hacemos SOLO la minicoreografía ya sin los diálogos </p>
+        <button onclick="playAudio('16 Single Ladies Fragmento editado.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <p class='Arial'> <strong>TODOS: </strong> Uo oh oh, oh ho oh </p>
+        <p class='typewriter-font'>Con ese pasito salen</p>
+
+
+        <h2 id="escena_09">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 9 - GUARDIANES DE CIUDAD ESMERALDA</h2>
+        </div>
+
+        <p class='typewriter-font'>Guardias entran marchando y con sus smartphones en la mano… y continúan marchando</p>
+        <p class='Arial'> <strong>CHOP: </strong> Hola Chip, ¿trabajando, o que hace? </p>
+        <p class='Arial'> <strong>CHIP: </strong> Hola Chop, sí aquí trabajando </p>
+        <p class='Arial'> <strong>CHOP: </strong> Un Fornite ¿o qué? </p>
+        <p class='Arial'> <strong>CHIP: </strong> Va va, Jálo… </p>
+        <p class='Arial'> <strong>CHOP: </strong> Oye, ¿ya viste este TikTok? </p>
+        <p class='Arial'> <strong>CHIP: </strong> Sí, ya lo ví, hay que hacerlo. </p>
+        <p class='Arial'> <strong>CHOP: </strong> ¿Oye?, ¿por qué seguimos marchando? </p>
+        <p class='Arial'> <strong>CHIP: </strong> No lo sé </p>
+        <p class='Arial'> <strong>CHOP: </strong> Alto…. ¡ya! </p>
+        <p class='typewriter-font'>Para de marchar</p><br>
+        <p class='Arial'> <strong>CHOP: </strong> ¡Ay!, ahora nos ha tocado vigilar el ala norte del castillo </p>
+        <p class='Arial'> <strong>CHIP: </strong> Ya sé, aquí hay puros naquitos </p>
+        <p class='Arial'> <strong>CHOP: </strong> Nadie de aquí usa iPhone puro Android, ¡y sin datos! </p>
+        <p class='Arial'> <strong>CHIP: </strong> Naquitos!!! </p>
+        <p class='Arial'> <strong>CHOP: </strong> Pobretones!!! </p>
+        <p class='Arial'> <strong>CHIP: </strong> Oye ya viste que aquí hay puro que huele bien feo, ¿de Jardines de la Hacienda? </p>
+        <p class='Arial'> <strong>CHOP: </strong> Ay sí Guácala, que se creen ya pudientes, pero hay que vivir mas al centro para poder serlo </p>
+        <p class='Arial'> <strong>CHIP: </strong> Ay sí…!!! </p>
+        <p class='Arial'> <strong>CHOP: </strong> ¿Oye?, ¿te fijaste que el “gaytometro”, la última vez que se acerco un León marco más de 200? </p>
+        <p class='Arial'> <strong>CHIP: </strong> Sí, si me fije, que cobarde que ya no viene </p>
+        <p class='Arial'> <strong>CHOP: </strong> Siempre le huye, cada vez que ve el “gaytometro” se esconde </p>
+        <p class='Arial'> <strong>CHIP: </strong> Ojalá tengamos un día tranquilo </p>
+        <p class='Arial'> <strong>CHOP: </strong> Sí ojalá no se aparezcan naquitos por aquí </p>
+        <p class='Arial'> <strong>CHIP: </strong> Oye, ¿cuánto tiempo llevamos ya de guardia? </p>
+        <p class='Arial'> <strong>CHOP: </strong> Dos minutos </p>
+        <p class='Arial'> <strong>CHIP: </strong> ¿Apenas?, ¡ya me quiero ir a comer! </p>
+        <p class='Arial'> <strong>CHOP: </strong> ¡Yo también! </p>
+
+
+        <h2 id="escena_10">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 10 - LLEGANDO A CIUDAD ESMERALDA</h2>
+        </div>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Misma canción de la escena anterior </p>
+        <p class='typewriter-font'>Llegan Dorothy, León, Hojalata y ESPANTAPAJAROS a Ciudad Esmeralda</p>
+        <button onclick="playAudio('16 Single Ladies Fragmento editado.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+        
+       
+        <p class='Arial'> <strong>TODOS: </strong> Uo oh oh, oh ho oh </p>
+        <p class='Arial'> <strong>TODOS: </strong> ¡Wow, Ciudad Esmeralda! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Esta custodiada por un par de guardias ¿Cómo haremos para entrar? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Tengo una idea, aprovechando a que los guardias están entretenidos en su celular acerquémonos a hurtadillas para pasar desapercibidos. </p>
+        <p class='Arial'> <strong>LEON: </strong> ¡No, tengo una mejor idea! Aprovechando a que los guardias están entretenidos en su celular acerquémonos a hurtadillas para pasar desapercibidos. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Que buena idea! a mí nunca se me hubiera ocurrido, ya ves que no tengo cerebro. </p>
+        
+        <p "class="typewriter-font"> Avanzan a hurtadillas</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font"> efecto sonido rechinido de HOJALATA</p>
+        <button onclick="playAudio('14 sonido de columpio oxidado.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+
+
+        <p class='Arial'> <strong>CHIP: </strong> ¿Escuchaste algo? </p>
+        <p class='Arial'> <strong>CHOP: </strong> No, pero ¿Y estas estatuas? ¿A qué hora las pusieron? </p>
+        <p class='Arial'> <strong>CHIP: </strong> No sé pero esta está muy fea </p>
+        <p class='typewriter-font'>Comienzan a criticar al león</p>
+        <p class='typewriter-font'>Los guardias regresan a sus celulares y los demás vuelven a avanzar, rechina otra vez el HOJALATA</p>
+        <p class='Arial'> <strong>CHOP: </strong> ¡Se volvieron a mover las estatuas! </p>
+        <p class='Arial'> <strong>CHIP: </strong> ¡No son estatuas! Son… </p>
+        <p class='Arial'> <strong>CHIP y CHOP: </strong> ¡Intrusos! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Ya nos cayó la voladora! </p>
+        <p class='typewriter-font'>Intentan escapar, pero los guardias los atrapan</p><br>
+        <p class='Arial'> <strong>CHOP: </strong> ¿A dónde creen que van sin permiso? </p>
+        <p class='Arial'> <strong>CHIP: </strong> Por este muro nadie pasa y menos si son naquitos, a ver, muestren su Green Card. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No tenemos. Pero nada más queremos pasar a ver al Mago de Oz y nos vamos. </p>
+        <p class='Arial'> <strong>CHIP: </strong> Híjole… eso no se va a estar pudiendo Joven… El Mago anda bien ocupado… y pues tendríamos que ver cómo nos arreglamos si quisieran pasar… pero pues si la veo difícil.  </p>
+        <p class='Arial'> <strong>LEON: </strong> ¿Y cómo de a cuanto estamos hablando, para solucionar esa dificultad? </p>
+        <p class='Arial'> <strong>CHOP: </strong> Chip… ¿Hueles eso? </p>
+        <p class='typewriter-font'>Simulan oler algo extraño</p>
+        <p class='Arial'> <strong>CHIP: </strong> Si… huele como a pobreza ¿no? </p>
+        <p class='Arial'> <strong>CHOP: </strong> Ay huelen bien extraño, como a que cobran por semana. </p>
+        <p class='Arial'> <strong>CHIP: </strong> Sí, Guácala… </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No, yo cobro por quincena. </p>
+        <p class='Arial'> <strong>CHIP y CHOP: </strong> ¡Uy no! ¡Peor aún! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Yo ni cobro por eso asalto. </p>
+        <p class='typewriter-font'>Todos cuidan su cartera</p>
+        <p class='Arial'> <strong>CHIP y CHOP: </strong> Ayyyy… Que malandro. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Yo ni se cómo cobro, todo se lo daba a ella! La que me abandonó y se llevó mis sueldos y mi corazón.  </p>
+        <p class='Arial'> <strong>CHIP y CHOP: </strong> Uyyyyy </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Yo cobro todos los días ya que la demanda de mi producto ha estado incrementando los últimos años inversamente proporcional a la inflación y he estado haciendo mucho dinero invirtiéndolo en bitcoin. </p>
+        <p class='Arial'> <strong>CHIP y CHOP: </strong> Uy, ¡este es un emprendedor sin futuro! </p>
+        <p class='Arial'> <strong>CHIP: </strong> ¿Y así quieren ver al Mago de Oz? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Entonces cuando o cómo podríamos entrevistarnos con el Mago de Oz? </p>
+        <p class='Arial'> <strong>CHOP: </strong> Híjole esa información no se la venimos manejando… Solo sabemos que ve a la plebe en miércoles ciudadano, pero eso solo pasa una vez al año. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> No es cierto, yo lo eh visto paseando con toda su comitiva ahí en el jardín Guerrero. </p>
+        <p class='Arial'> <strong>CHOP: </strong> Mira Chip, a éste como que lo conozco… </p>
+        <p class='Arial'> <strong>CHIP: </strong> ¿Acaso no es el león que marco hasta 200 puntos en el Gaytómetro?  </p>
+        <p class='Arial'> <strong>CHOP: </strong>  ¡¡Es cierto!! A ver, sácalo. </p>
+        <p class='Arial'> <strong>CHIP: </strong> ¡Va! </p>
+        
+        <p class='typewriter-font'>Chip saca el gaytometro y miden al león. El gaytometro comienza a sonar</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido Gaytómetro</p>
+        <p class='typewriter-font'>SINCRONIZAR EL SONIDO CON LOS MOVIMIENTOS</p>
+        
+        <button onclick="playAudio('17 Sonido del Gaytometro.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <p class='typewriter-font'>El león intentará con poco éxito esquivar el escaneo del gaytómetro</p>
+
+        <br>
+
+        
+        <p class='Arial'> <strong>CHOP: </strong>  ¡Oye no, espérate! ¡Es mucho, se me va a descomponer! </p>
+        <p class='Arial'> <strong>CHIP: </strong> Ah Dio… ¿Y ahora qué hacemos? Si lo rechazamos nos van a cancelar por discriminatorios… </p>
+        <p class='Arial'> <strong>CHOP: </strong>  No, no… ¡Pues hay que dejarlos pasar! </p>
+        <p class='Arial'> <strong>CHIP: </strong> ¡Chicos! Nos hubieran dicho antes que son de la comunidad. En Disney y aquí son bienvenidos toda la comunidad LGBTQ HIJKLMN+ </p>
+        <p class='Arial'> <strong>CHOP: </strong>  Adelante por favor. </p>
+        <p class='typewriter-font'>Pasa el león</p>
+        <p class='Arial'> <strong>CHIP: </strong> Y además de ascendencia étnica… pásenle por favor, que orgullo... </p>
+        <p class='typewriter-font'>Pasa el HOJALATA</p>
+        <p class='Arial'> <strong>CHOP: </strong> ¿Y tú porqué tan descorazonado? Échele ganas  </p>
+        <p class='typewriter-font'>Pasa Dorothy dando saltitos</p>
+        <p class='Arial'> <strong>CHIP: </strong> ¿Y tú? ¿Qué honda con tu exceso de felicidad?  </p>
+        <p class='Arial'> <strong>CHOP: </strong> Que cursi. </p>
+        <p class='Arial'> <strong>CHIP: </strong> Ya bájale ó te sacamos. La depre es lo de hoy. </p>
+        <p class='typewriter-font'>Pasa el ESPANTAPAJAROS, pero los guardias lo detienen</p>
+        <p class='Arial'> <strong>CHOP: </strong> ¿Oye tú no eres el que anda repartiendo por aquí? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Simón, sí, soy yo. </p>
+        <p class='Arial'> <strong>CHOP: </strong> ¿A cuánto? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> A $200</p>
+        <p class='typewriter-font'>El ESPANTAPAJAROS saca una bolsita con “orégano” y la entrega al guardia</p>
+        <p class='Arial'> <strong>CHOP: </strong> Así sí da gusto trabajar en el ala norte. </p>
+        <p class='Arial'> <strong>CHIP: </strong> ¿Verdad que sí? </p>
+        <p class='Arial'> <strong>CHOP: </strong> Oye pues ya es hora de comer ¿No? Llevamos 15 minutos aquí. </p>
+        <p class='Arial'> <strong>CHIP: </strong> Sí, ya vámonos. </p>
+
+
+        <h2 id="escena_11">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 11 - SALA DE ESPERA</h2>
+        </div>
+
+        <p class='typewriter-font'>Llegan Dorothy, León, Hojalata y ESPANTAPAJAROS a la sala de espera y ven a un maniquí</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Qué bueno que sí nos dejaron entrar! </p>
+        <p class='typewriter-font'>Ven a un maniquí en medio de ellos</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Changos, monos y gorilas! Este maniquí sí rifa… Se acerca a moverlo ¡Está bien chido! </p>
+        <p class='typewriter-font'>Los demás también lo mueven mientras hablan</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Tiene la piel tan lisita. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Cómo cuánto me darán por esto en el monte? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Pero no está tan bonito, está muy alta ¿no?, nadie tiene una piel así </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Se me hace que tampoco tiene cerebro, reconozco esa mirada perdida. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Nah… tiene algunos defectos de fábrica. Le mueve un brazo Le falta aceitarse. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Entonces aquí es dónde vamos a ver al Mago de Oz? Chale, ojalá y sí me de valor porque ya me urge salir closs… digo… de la chamba. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Ojalá a mí me de mi corazón, y a mi amada. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Y a mí me cerebro, ya me urge pensar. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Ay, pues yo quería tantas aventuras, un príncipe, encontrar el amor… Pero ahora, extraño mi casa y a mis tíos… </p>
+        <p class='typewriter-font'>El león se acerca a Dorothy</p>
+        <p class='Arial'> <strong>LEÓN: </strong> Tranquila Dorothea, tu ármate de valor y ahorita aquí le haces tus pedidos al mago, y mira, de volada, veras que sí rifa. </p>
+        <p class='typewriter-font'>El ESPANTAPAJAROS y el HOJALATA también se acercan dando la espalda al maniquí</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Tú eres muy inteligente, lograrás lo que quieras, solo debes precisar tus deseos porque eso de vivir aventuras, no es muy claro, lo del príncipe no es muy realista, y lo del amor… pues innecesario, creo lo puedes conseguir sin pedirlo en un deseo.  </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡No es tan fácil como parece ESPANTAPAJAROS! Tu tranquila Dorothy, seguramente el mago te ayudará a encontrar un gran amor, uno que valga la pena… aunque sea al principio.  Y aunque después te engañe 10 veces, y tú lo perdones, y termine diciéndote que nunca te deseo, que está decepcionada de ti… y se termine llevando todo, hasta tu corazón… </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Tranquilo Hojalata, ¿A ver? ¿Dónde está tu aceite? Tómale tómale… </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Y entonces ¿dónde vamos a encontrar al Mago de Oz? Aquí solo esta esa cosa. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Tiene un código de barras, en el que se puede leer…. ¿“Siriexa”? </p><br>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">ACTIVAR SONIDO A*L*E*X*A </p>
+        <button onclick="playAudio('18 Alexa Skill Launch Sound.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+
+
+        <p class='Arial'> <strong>SIRIEXA: </strong> Sí. ¿En qué puedo ayudarte?  </p>
+        <p class='Arial'> <strong>TODOS: </strong> ¡¡¡a su pinshi madre, no manches, se me salió algo del susto, cámara que pedo, ay en la madre, ay nanita la ranita! </p>
+        <p class='typewriter-font'>Siriexa despierta</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Lo siento, no encontré resultados para  “ah ah ah su pinshi madre” </p>
+        <p class='typewriter-font'> Y va repitiendo algunas de las frases que recuerde que dijimos,se asustan</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Ora ora el maniquí habla! </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Como inteligencia artificial, puedo decirte que eso es una estupidez. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Más bien ha de ser un Robot.  </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿Quién eres? </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">ACTIVAR SONIDO A*L*E*X*A </p>
+        <button onclick="playAudio('18 Alexa Skill Launch Sound.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+        <p class='Arial'> <strong>SIRIEXA: </strong> Hola, bienvenidos a conocer ¡Al gran mago de Oz! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Qué dijistes? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Bienvenidos a conocer ¡Al gran mago de Oz! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Tú eres el gran mago de Oz? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Bienvenidos a conocer ¡Al gran mago de Oz! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong>  Esperen, eso yo lo reconozco, ya se trabó </p>
+        <p class='typewriter-font'>Hojalata también se bugea y repite</p>
+        <p class='Arial'> <strong>HOJALATA: </strong>  Esperen, eso yo lo reconozco, ya se trabó </p>
+        <p class='typewriter-font'>Alguien que le da un zape a HOJALATA cuando este reacciona le da un zape a Sirexia</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Gracias. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Entonces tú eres el gran mago de Oz? </p>
+        <p class='typewriter-font'>Bulla total , todos piden sus deseos al mismo tiempo y en voz alta</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡SI-LEN-CIO¡ </p>
+        <p class='typewriter-font'>Todos se callan menos el ESPANTAPAJAROS que dice:</p>
+        
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> “¡Y EL PUBLICO QUE NI SABE QUE AQUÍ HAY CUCARACHAS CON ALAS!” </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Un momento, súbditos color cartón mojado. No soy el gran mago de Oz, yo soy Siriexa su asistente personal. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Mi asistente personal? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> No… del Mago de Oz. Me creó porque tampoco pudo encontrar el amor y se sentía muy solo. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Entonces el amor no existe? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> No, el amor “son los papás” </p>
+        <p class='typewriter-font'>Dorothy se pone a llorar junto con el HOJALATA</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> ¿en qué les puedo ayudar hoy? </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Queremos una audiencia con el mago de Oz pa´ que nos conceda los deseos. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Sí, queremos conocerlo! </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Veré si está disponible. Llamando a "El gran mago de Oz" </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> lo sentimos, por el momento ninguno de nuestros operadores está disponible, espere unos minutos </p>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">suena música de espera"</p>
+        <button onclick="playAudio('09 musica de espera.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        
+        <p class='typewriter-font'>sigue sonando la música de espera</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Tranquilos, seguro nos atenderán en cualquier momento. </p>
+        <p class='typewriter-font'>Apagón de luces y cambiamos de posición</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> En cualquier momento...  </p>
+        <p class='typewriter-font'>El león roncando, y el ESPANTAPAJAROS va a donde está el león</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> En cualquier momento...  </p>
+        <p class='typewriter-font'>Acomodan al León</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡León, no me dejas dormir! ¡Ponte de ladito! </p>
+        <p class='typewriter-font'>Mientras se le va quitando la modorra al León</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Ora ora! ¿Cómo que de ladito? Aunque sea invítame un cafecito. A caray ¿Qué todavía no nos atienden? Dorothy, márcale otra vez. </p>
+        <p class='typewriter-font'>Dorothy se despierta</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Siriexa ¿Qué pasó? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Su llamada finalizó hace 20 minutos ¿Quiere volver a marcar? </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Pues claro que queremos volver a marcar si queremos ver al mago!!! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿Dónde está el Gran Mago de Oz? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Para ir a ver al mago de oz a tome el camino amarillo, a 100 metros gire a la izquierda con dirección a la rotonda</p>
+        <p class='typewriter-font'>Dice el león al público</p>
+        <p class='Arial'> <strong>LEÓN: </strong> Mirén esa señora esta muy rotanda, sí esta bien rotondísima!!! </p>
+        
+        <p class='Arial'> <strong>SIRIEXA: </strong>Tome la segunda salida a la izquierda y manténganse en el mismo carril, a 200 metros, su destino estará a la derecha. </p>
+        <p class='typewriter-font'>Todos le damos la vuelta al inmueble para salir por donde esta Kareny al final regresamos al escenario</p>
+        <p class='typewriter-font'>Se quejan de como los llevó al mismo lugar, Miramos a todos lados</p><br>
+        
+        <p class='Arial'> <strong>SIRIEXA: </strong> Recalculando ruta, has llegado a tu destino Sí, es en este mismo lugar. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Entonces qué tranza mi chat GPT región 4? ¿Lo vamos a ver o no? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> ¿Están listos para ver al Gran Mago de Oz? </p>
+        <p class='Arial'> <strong>LEÓN, HOJALATA, ESPANTAPAJAROS Y DOROTHY </strong> ¡Sí capitán! ¡Estamos listos! </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> No los “escuuuuuucho”. </p>
+        <p class='Arial'> <strong>LEÓN, HOJALATA, ESPANTAPAJAROS Y DOROTHY </strong> ¡Sí capitán estamos listos! </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Reproduciendo música de Bob Esponja desde Spotify y canciones similares. </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena música intro de Bob esponja y todos cantan"</p>
+        <button onclick="playAudio('10 Bob Esponja - Canción.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+        
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Basta! ¿Vamos a ver al Mago de Oz o no? </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> ¿Están listos para ver al Gran Mago de Oz? </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Sí, pero ya sin canción del Bob Esponjas! </p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Con ustedes ¡El Gran Mago de Oz! </p>
+
+
+
+        <h2 id="escena_12">♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 12 - EL GRAN MAGO DE OZ</h2>
+        </div>
+
+        <p class='typewriter-font'>Se coloca la tela que proyectará la sombra/silueta del MAGO DE OZ</p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena melodía de boda, que a los 10 SEGUNDOS EXACTAMENTE el mago interrumpe con voz muy GRAVE</p>
+        <button onclick="playAudio('12 Entrada increíble del Mago de Oz.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> ¡Quítala Quítala esa es para mi boda con Sirexia!</p>
+        <p class='typewriter-font'>Sonido de glitch cambia por canción Back in Black de AC/DC</p>
+
+        
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> ¡¡¿Quién osa interrumpir al gran Mago de Oz?!! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Nosotros… </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿A poco si andaba muy ocupado? </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> ¡Por supuesto! ¡El gran Mago de Oz siempre está ocupado con las labores que hacen que el mundo siga girando! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿En serio? Y ¿Qué es lo más importante que ha hecho por el mundo? </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Cuando se calló Twitter… ¿Quién creen que ayudo a “Elliot Moss” a recuperarlo? ¡Yo!… Cuando Edgar se cayó, ¿Quién creen que viralizo el video?: ¡YO! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿Y ahorita que andaba haciendo? </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Estaba haciendo lo más importante del internet, creando el alimento básico para que el mundo pueda ser feliz… Estaba… ¡Grabando videos de gatitos!</p>
+        <p class='Arial'> <strong>TODOS: </strong> ¡Awwww! ¡Que tierno! </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Y ustedes osaron interrumpirme… ¿Para qué? ¡¿Qué es lo que quieren?! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Pues mire… básicamente le queríamos pedir uno deseítos ¿no? Cosas así sencillas para usted… nada como lo de recuperar el “Tuister” ni cosas así… algo sencillo… Yo pues básicamente… quisiera que me diera valor y coraje. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Yo quisiera recuperar mi corazón. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Yo quisiera tener un cerebro. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Yo quisiera regresar a Querétaro, con mis tíos. </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> ¿Y por qué debería yo de ayudarles? </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Por queeee…  ¿eres buena persona? </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> ¡No lo soy! Manejo el internet… ¿Cómo creen que podría ser una buena persona? </p>
+        <p class='Arial'> <strong>TODOS: </strong> No pues sí, tiene razón… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿Y entonces? ¿Hay algo que tú quisieras a cambio de cumplirnos nuestros deseos? </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Nada que ustedes pudieran conseguir… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Bueno… pero si hay algo. Si acaso pudiéramos hacerlo ¿Que sería? </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Una misión suicida… </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Ya dinos cuál es! </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Robar a la malvada Bruja del Oeste… ¡Su escoba Mágica! </p>
+        <p class='Arial'> <strong>TODOS MENOS DOROTHY </strong> ¡Oh Dios no! ¡El Horror! ¡Imposible!¡Qué espanto!, ¡No, no se puede! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Esta bien. ¡Lo haremos! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Estás loca?</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Piensa como si tuvieras cerebro y habla en serio! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Dorothy, permite revisarte con mi herramienta… creo que se te safó un tornillo. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No chicos… No es una locura. ¿De verdad pensaron que iba a hacer tan fácil? ¿Qué iban a pedir a alguien que les cumpliera sus deseos y este se iba a cumplir, así como así? Todo lo que vale la pena, tiene un precio, y cuesta trabajo y mucho. Si no están dispuestos a pagar el precio, si tienen mucho miedo de la bruja como para cumplir esta misión y lograr su sueño, entonces váyanse ahora mismo. </p>
+        <p class='typewriter-font'>El León comienza a irse</p>
+        <p class='Arial'> <strong>HOJALATA Y ESPANTAPAJAROS </strong> ¡León! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Pues ella dijo… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Era retórico… </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Ah… ¿Qué es retórico? </p>
+        <p class='typewriter-font'>León comienza a irse pero lo detienen Hojalata y Espantapájaros</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No es retórico… si es tan peligroso como dicen… si vamos, quizás no volvamos vivos todos… Pero si volvemos, sabremos que nos enfrentamos a todo lo que creíamos imposible y lo logramos, y regresaremos orgullosos a reclamar nuestro premio. La realización de nuestros sueños. Tu cerebro, tu corazón, tu valor… mi hogar</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Yo estoy con Dorothea… prefiero morir en el intento, que vivir una vida de llanto y sufriendo por no atreverme a enfrentar a la bruja para recuperar mi corazón. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Tu vida suena como de divorciado con 5 hijos que paga pensión… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡siete!</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Yo también estoy con Dorothea… Prefiero romper los paradigmas de lo que es razonable, enfrentarme a la ortodoxia y sus prácticas fóbicas, enfrentaré la preeminencia y las estructuras del poder mediático que me dictan lo que puedo y no puedo hacer… Yo haré posible lo que otros creen imposible… naciendo pobre seré rico, naciendo de feos seré guapo, ¡luchare con la bruja y obtendré mi cerebro! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Bueno… pero entonces. ¿Vas ir o no vas ir? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Claro que iré! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Yo les diría "que sí voy"… pero soy muy cobarde para decirlo. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Entonces no irás? </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Ósea sí voy_ir… pero no lo voy a "dicir". </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Gran Mago! ¡Aceptamos tu trato! </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Perdón… estaba jugando Fornite con los guardias. ¿Qué paso? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Que aceptamos el trato… ¡Iremos por la Escoba de la Bruja mala de Oeste! </p>
+        <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Muy bien, cuando regresen aquí estaré esperándolos para cumplir sus deseos. </p>
+        <p class='typewriter-font'>Salen</p>
+
+
+        <h2 id="escena_13">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 13 - LA BENDICION DE LAS HADAS</h2>
+        </div>
+
+        <p class='Arial'> <strong>SIRIEXA: </strong> La llamada con el Gran Mago ha terminado… si quiere volver a llamar favor de traer una escoba Mágica. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Bueno… ¿y que ruta tomamos para llegar con la Bruja Malvada del Oeste? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Dorothea… ¿estás segura de esto? La Bruja Malvada del Oeste… es muy Bruja!!! </p>
+        <p class='Arial'> <strong>LEON: </strong> y muy Malvada!!! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong>  Y muy del Oeste!!! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> No hay peor Lucha, que Lucha Villa... perdón, quiero decir que: "No hay peor intento, que el que no se hace… </p>
+        <p class='typewriter-font'>Entran las Hadas</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Ay no puede ser! ¡Ahí está mi ex! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿La que te robo el corazón? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Si! Es ese que trae clavado en su varita. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Zaz! Eso si está muy Creepy hermano… ¿Por qué no le pides que te lo devuelva? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> No se me había ocurrido… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Oh… pues si el que no tiene cerebro soy yo. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Pues vas! ¡Pídeseselo!, ¡Pídeseselo!!!</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡No puedo! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Por qué no? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Porque… porque… </p>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena la pista de "ESTA COBARDIA”</p>
+        <p class='typewriter-font'>Hojala Canta junto con la pista, tipo playback</p>
+        <button onclick="playAudio('13 ESTA COBARDIA para HOJALATA.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <p class='typewriter-font'>“Esta cobardía de mi amor por ella, hace que la vea igual que a una estrella, tan lejos, tan lejos en la inmensidad… que no espero nunca poderla alcanzar” </p>
+        <br>
+        <br>
+     
+        <p class='Arial'> <strong>LEÓN: </strong> Nombre carnal, sí que eres un “simp”, aquí el cobarde soy yo… no me quites el puesto. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Por favor, ocúltenme que no me vea… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Créeme amigo… ese es tú problema base… ella no te ve… ni aunque te esforzaras… no te verá. </p>
+        <p class='typewriter-font'>Durante el resto de la escena el León y el Espantapajaros pondrán a Hojalata frente al Hada SHAVASANA, sin que ella lo vea en lo más mínimo</p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Dorothea… nos hemos enterado de que iras a enfrentarte a la malvada Bruja del Oeste. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Si! ¡Y no intenten impedirlo! Soy más terca que AMLO cuando busco la presidencia, más terca que los cobradores de banco Azteca, más terca que la amante de un casado. </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> No queremos impedirlo, solo queremos ayudarte y advertirte que la Bruja Malvada del Oeste  lo ve todo.  </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Es muy probable que mande a todos sus ejércitos por ti. </p>
+        <p class='Arial'> <strong>ESPANTAPAJOROS: </strong> Y nada más por pura CURISIDAD ¿Cómo que ejércitos tiene? </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Tiene una manada de lobos… </p>
+        <p class='Arial'> <strong>LEON: </strong> ¡Que manada es esa! </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Un enjambre de avispas… </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Una parvada de cuervos… </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> y un ejército de Winkies. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Y qué son los Winkies? </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Monos Voladores “Gais” con superpoderes. </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Y la bruja además posee el mágico gorro dorado, que obliga a los monos voladores gais con superpoderes. a obedecerla en tres ocasiones. </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Y ya uso dos. </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> EL Primer encargo de la bruja a los monos voladores gais con superpoderes, fue tomar a la fuerza la parte Oeste del reino de Oz. </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> La segunda vez, los usó para mandar al mago de Oz fuera de las tierras conquistadas, impidiendo que el mago la destronara. </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Y aún le queda una petición que hacerles a los monos voladores gais con superpoderes. </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Por eso necesitarán toda la ayuda que puedan obtener. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡¿Y ustedes van a ayudarnos?! </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> ¡Claro! ¡Para eso estamos aquí! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Genial! Con la ayuda de las Hadas buenas del Norte y del Sur, ya hasta como que me siento Valiente. </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Antes que nada… aquí tienen pulseras rojas para todos, efectivas contra:  el mal de ojo, empacho, espanto, envidias, ojo de pescado y el mal de orín. </p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> También para todos y cada uno, la poderosísima medalla de San Benito, ya saben… para protegerlos de cualquier maleficio. </p>
+        <p class='typewriter-font'>Nos colocan las medellas de San benito en el cuello</p>
+
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Y ahora lo más importante… </p>
+        <p class='Arial'> <strong>LAS DOS HADAS: </strong> ¡La bendición!:</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sonido efecto bendición en Latín, mientras dan la bendición con las manos</p>
+        <button onclick="playAudio('19 In Nomine Patris Et Filli Et Spiritus Sancti Sound Effect.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <p class='Arial'> <strong>TODOS: </strong> ÁAAAAAAAAAAMEEEEEEEEEEEEEEEEEEEEEEN!! </p>
+        <br>
+        
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Y ahora el instrumento más poderoso que las abuelas y madres del mundo nos han enseñado… </p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong>  Un beso en la frente para ahuyentar “EL MAL AYU-YU” </p>
+        <p class='typewriter-font'>Nos formamos para que las hadas nos besen en la frente</p>
+        <p class='typewriter-font'>Los besan a todos en la frente menos al HOJALATA</p>
+        <p class='typewriter-font'>Cuando es el turno del beso en la frente del León, el hada Shavasana dice:</p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong>ah este le tocan 2 besos, por que tiene mucha frente!</p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Bueno… suerte. ¡Adiós! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡¿Qué?!, ¿esa fue toda la ayuda?, no manchen, ¡tantito más y nos daban un espantasuegras!, na, ya en serio, nos hubieran dado algo más chido, no sé una espada o la chancla voladora de las mamás o el martillo de Thor. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Por fin se fue! Lo hicimos bien… creo que no me vió. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Y mira que nos esforzamos por que lo hiciera… hubiera sido más fácil que te viera Andrea Boccelli o el Steve Wonder. </p>
+        <p class='Arial'> <strong>LEON: </strong> ¡o ya de a perdis el Rigo Tovaaar! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Bueno ya que tenemos nuestros amuletos y que fuimos besuqueados por las Hadas… ¡Ahora sí! ¡Vayamos por la Malvada Bruja del Oeste! </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Pista Tierra de Osos - En Marcha Estoy</p>
+        <button onclick="playAudio('28 Tierra de Osos - En Marcha Estoy (fragmento).mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <p class='typewriter-font'>Salimos cantando esta canción</p>
+        <br>
+
+
+        <h2 id="escena_14">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 14 - LA MALVADA BRUJA DEL OESTE</h2>
+        </div>
+
+        <p class='typewriter-font'>Entra la Malvada Bruja de Oeste con su bola de cristal.</p>
+        <p class='Arial'> <strong>BRUJA DEL OESTE </strong> Así que otra sucia foránea viene a invadir nuestras tierras… ¿¡Por qué no entienden que ya estamos llenos!? Ya nos acabamos los cerros para poner casas Infonavit. Ya le pusimos cinco pisos a 5 de febrero y ni así mejora el tráfico, ya no nos alcanza el agua ni la luz con los que estamos y todavía quieren venir más a invadirnos. Y no contenta con eso además quiere robarme mi escoba ¡Mi escoba! ¡Ahh pero sobre mi cadáver dejaré que entren más robaderos!, ¡¿No entienden?! aquí es bandera blanca!, aquí viven las familias de políticos, militares y narcos… no podemos permitir una alteración como esta… Así que mandaré a mis huestes… Primero ¡La Manada de Lobos!</p>
+        
+        <p class='typewriter-font'>Aventureros en otro lado del escenario.</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Oigan ¿Qué es eso que se acerca? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Suenan como lobos… Pero no estoy seguro… no tengo cerebro. </p>
+
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sonido efecto Aullido de Lobo</p>
+        <button onclick="playAudio('20 Lobo aullando-efecto de sonido.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+        
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Son Lobos! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡¡mmmmm!! LOBITOS, LOBITOS, LOBIIITOOOOOS!</p>
+                
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sonido efecto RUGIDO DE LEON</p>
+        <button onclick="playAudio('21 Rugido de Leon.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+        
+        <p class='Arial'> <strong>LEÓN: </strong> Vengan con Papi, LOBITOS!</p>
+        
+        
+        <p class='Arial'> <strong>LOBO 1: </strong> ¿Qué es eso? </p>
+        <p class='Arial'> <strong>LOBO 2: </strong> Suena como a un León Gay. </p>
+        <p class='Arial'> <strong>LOBO 1: </strong> ¡No manches! ¡Retirada! </p>
+        <p class='Arial'> <strong>LOBO 2: </strong> Un León si nos come ¿no? </p>
+        <p class='Arial'> <strong>LOBO 1: </strong> Deja lo León… ¡Lo Gay! </p>
+        <p class='Arial'> <strong>LOBOS: </strong> ¡Retirada! </p>
+        <p class='typewriter-font'>-------</p>
+        <p class='Arial'> <strong>BRUJA DEL OESTE </strong> ¡Ay! ¡No puede ser! ¡Los lobos fallaron! No importa… Ahora enviaré a  ¡el enjambre de avispas! </p>
+        <p class='typewriter-font'>Aventureros en otro lado del escenario.</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿Escuchan eso? </p>
+
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sonido efecto ENJAMBRE DE AVISPAS</p>
+        <button onclick="playAudio('22 Emjambre de Avispas.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Suenan como avispas… Pero no estoy seguro… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Ya sé… porque no tienes cerebro… Pónganse atrás de mí. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Ay sí… ¡Con todo gusto! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Es para protegerlos… a mí los aguijones de las avispas no me hacen nada…Soy de Hojalata. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> y el de los Leones?! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Suena lógico… un HOJALATA… hecho de hojalata… </p>
+        
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Nuevamente Sonido efecto ENJAMBRE DE AVISPAS</p>
+        <button onclick="playAudio('22 Emjambre de Avispas.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Atrás avispas! Hojalata repele las avispas </p>
+        
+        <p class='typewriter-font'>-------</p>
+        <p class='Arial'> <strong>BRUJA DEL OESTE: </strong> ¡Ay no! ¡También mis avispas fueron derrotadas! Está bien… no pasa nada aún tengo… ¡Mi parvada de cuervos! </p>
+        <p class='typewriter-font'>Aventureros en otro lado del escenario.</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Miren eso! ¡son…! </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sonido de efecto PARVADA DE CUERVOS</p>
+        <button onclick="playAudio('23 Sonido de Cuervos.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Cuervos! ¡Alguien que haga algo! ¡Nos sacarán los ojos! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Pues te toca a ti… ¡Tú eres el ESPANTAPAJAROS! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Tienen razón! ¡Es mi turno! Se acercan amenazadores los cuervos ¡Amigos cuervos! ¿Qué les parece si les doy una onza gratis y nos dejan en paz? </p>
+        <p class='Arial'> <strong>CUERVO 1: </strong> ¿Una onza? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Les conviene… es orgánica, libre de karma es una Purple Rush buenísima…. </p>
+        <p class='Arial'> <strong>CUERVOS 2: </strong> ¡Orales! ¡Eso si es calidad! </p>
+        <p class='Arial'> <strong>CUERVO 1: </strong> ¡Se arma carnal! Sobres… chido tu coto. Ahí nos vidrios. Se van </p>
+        <p class='typewriter-font'>-------</p>
+        <p class='Arial'> <strong>BRUJA DEL OESTE: </strong> ¡¿Qué?! ¡Esto no puede ser posible! ¡También mis cuervos fallaron! Solo me queda una opción… ¡Pero no puedo! Sería la última vez… Pero no puedo permitir que ese grupo llegue hasta aquí… que tal que abren otra plaza… ya seriamos ciudad plazas… o qué tal que abren otro oxxo… seriamos ciudad oxxos… o que tal abren la madera, seriamos Ciudad Maderas… </p>
+        Situaciones desesperadas… requieren medidas desesperadas… ¡Monos voladores Gais con superpoderes! ¡Su ama, la poseedora del sombrero dorado… les tiene un último encargo! ¡Impidan que esos perdedores lleguen a mí… y es más! ¡Tráiganme a su líder! ¡Tráiganme a la tal Dorothea, esa que dice que es Influencer y “Viiiiiiiiirgen”!<br>
+        <p class='typewriter-font'>Se ríe porque no cree que sea virgen</p>
+        <p class='Arial'> <strong>BRUJA DEL OESTE: </strong>¡Tengo un par de cosas que decirle!</p>
+        <p class='Arial'> <strong>MONOS VOLADORES GAIS CON SUPERPODERES: </strong> ¡Ay sí ama! </p>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Al ritmo de la canción "TODOS ME MIRAN DE GLORIA TREVI"</p>
+        <button onclick="playAudio('26 Todos Me Miran -FRAGMENTO.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+        
+        
+        <p class='Arial'> <strong>DOROTHY: </strong> ¿¡Qué demonios es eso!? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Con riesgo a equivocarme… creo que son Monos Voladores Gais con Superpoderes… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Dios ¿Quién podrá contra ellos? </p>
+        <p class='typewriter-font'>Llegan los monos</p>
+        <p class='Arial'> <strong>BATIMONA: </strong> Entréguenos a la mona, y les dejaremos el mono en paz </p>
+        <p class='Arial'> <strong>LEÓN: </strong> No pues si están bien monos… ¿Cuáles se supone que son sus superpoderes? </p>
+        <p class='Arial'> <strong>SUPERMONA: </strong> Yo soy Supermona y pues… hecho miradas de fuego, me hecho aires de hielo… y estoy bien mamadísima. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Mmm… una Striper cualquiera… ¿Y tú anille verde? ¿Qué haces? </p>
+        <p class='Arial'> <strong>ANILLE VERDE: </strong> Yo puedo hacer realidad, lo que sea que te imagines, solo con mi anille… </p>
+        <p class='Arial'> <strong>LEON: </strong> ¿Con el anille?, eso a de dolerle, ¿qué no? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Giuu… ¿y tú?. </p>
+        <p class='Arial'> <strong>BATIMONA: </strong> Yo soy BATIMONA…  ¡y bailo tango, masco chicle, pego duro, tengo “money” de a montón, tururú.! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Bueno… y en que podemos ayudarles? </p>
+        <p class='Arial'> <strong>SUPERMONA: </strong> ¡Desistan de ir a enfrentar a la Malvada Bruja del Oeste! ¡Regresen a sus casas! ¡Y nos llevaremos a la Mona! </p>
+        <p class='Arial'> <strong>ANILLE VERDE: </strong> Supermona… no sería “O”?… ¡Desistan de ir a enfrentar a la Malvada Bruja del Oeste! ¡Regresen a sus casas! ¡”O” nos llevaremos a la Mona! </p>
+        
+        <p class='Arial'> <strong>LEÓN: </strong> “Noseamamona”, "Se_ama" Dorothea, pero sus amigos le dicen:  “Dorothy” </p>
+        <p class='Arial'> <strong>SUPERMONA: </strong> ¿Y sus enemigos? </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Sus enemigos le dicen:  “hay pero que bien se te ve ese peinado, que lindo tú vestido amiga, ¿bajaste de peso? </p>
+        
+        <p class='Arial'> <strong>BATIMONA: </strong> ¡No! La Malvada Bruja de Oeste dijo que le lleváramos a la Mona para hablar con ella. </p>
+        <p class='Arial'> <strong>SUPERMONA: </strong> Fue lo que les dije… denme a la Mona y regrésense a sus casas. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Oh que la chingada… que “Noseamamona”  </p>
+        <p class='Arial'> <strong>SUPERMONOS </strong> ¡¿Qué?! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Que "se_ama" Dorothea. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Y no se las vamos a entregar! </p>
+        <p class='Arial'> <strong>SUPERMONA: </strong> Ya verán que sí </p><br>
+        <p class='typewriter-font'>Monos gais se alinean encabezados por su Supermona</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Proteged a Dorothy!</p>
+
+        <p class='typewriter-font'>Con sus cuerpos hacen un semicírculo frente a Dorothy</p>
+        <p class='typewriter-font'>Y al más puro estilo de Pantera Negra</p>
+
+        <p class='Arial'> <strong>LEON:</strong> ¡I-VON-UE!</p>
+        <p class='Arial'> <strong>LOS TRES:</strong>¡I-VON-UE!</p>
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">AL SEGUNDO GRITO comienza a sonar la música de la batalla épica de los Avengers</p>
+        <button onclick="playAudio('25 Música Épica de Batalla Vengadores.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+        <br>
+        <p class='Arial'> <strong>LEON:</strong> ¡I-VON-UE!</p>
+        <p class='Arial'> <strong>LOS TRES:</strong> ¡I-VON-UE!</p>
+        <p class='Arial'> <strong>LEON:</strong> ¡I-VON-UE!</p>
+        <p class='Arial'> <strong>LOS TRES:</strong> ¡I-VON-UE!</p>
+
+        <p class='typewriter-font'>EXACTAMENTE EL SEGUNDO 17, de la música AVENTAR EL MARTILLO DE THOR A LA MANO VEGA(justo despues del grito de AMIGUIBIRIS)</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡AMIGUIVIRIS!...</p>
+        <p class='typewriter-font'>Aparece por el aire el Mjolnir y león lo atrapa con su mano</p>
+        <p class='Arial'> <strong>LEÓN: </strong> !UNIDOS!</p><br>
+            
+        <p class='typewriter-font'>Continua de fondo LA MUSICA DE LA BATALLA FINAL DE LOS VENGADORES CONTRA THANOS</p>
+
+        <p class='Arial'> <strong>LEON, ESPANTAPAJAROS Y HOJALATA </strong>!AHHHH!</p><br>
+            
+        <p class='typewriter-font'> Grito de guerra, empieza a correr uno bando contra otro, pero enseguida todo se ralentiza “como en cámara super slowmotion” </p>
+        <p class='typewriter-font'>León corre en super slowmotion frente a Supermana mono y le suelta un golpe con el Mjolnir, el cual Supermana esquiva.</p>
+        <p class='typewriter-font'>Al mismo tiempo Hojalata, quiere abrazar a Anille Verde, pero este se le cuela entre las piernas también en super slowmotion</p>
+        <p class='typewriter-font'>Al mismo tiempo cuando ESPANTAPAJAROS quiere darle una patada a Batmana, pero esta se hace a un lado y el se sigue de frente igual en super slowmotion</p>
+        <p class='typewriter-font'>De tal manera que los tres caen al suelo justo del otro lado de donde empezaron la batalla y los 3 Monos gais con superpoderes quedan donde esta Dorothea</p>
+        <p class='typewriter-font'>El tiempo vuelve a correr normal</p><br>
+        <p class='Arial'> <strong>SUPERMONA: </strong> ¡Ja!, Ahora te tengo Mona… </p>
+        <p class='typewriter-font'>La capturan y se la llevan Volando</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡NO!, Ayudaaaaa, suéltenme, ¡soy amiga de Kuri!,Ayudaaaaaaaaaa… </p>
+        <p class='Arial'> <strong>LEON, ESPANTAPAJAROS Y HOJALATA </strong> ¡Dorothy, nooooooooo! </p>
+
+        <h2 id="escena_15">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 15 - EL RESCATE DE DOROTHY</h2>
+        </div>
+
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Nooooo! ¡Dorotheaaaaa!.... bueno ya se la llevaron. Aquí se rompió una jerga y todos a la veeeerdad que ¿así no era? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡No! ¿Creen que Dorothea nos hubiera dejado atrás? Ella nos apoyó cuando nadie más lo hizo… ella me hizo sentir que tenía amigos, que alguien se interesaba por mí y mis sentimientos. Sentirme validado, me ha dado confianza, me ha sacado de la autocompasión… Me ha enseñado que el amor es algo más que el amor de pareja… Los quiero amigos. Y Quiero a Dorothea… ¡Y no podemos abandonarla en manos de la Malvada Bruja del Oeste y esas súper manas! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Estoy de acuerdo con lo que aquí mi amigo Robocop está diciendo… los monos no esperan que vayamos por Dorothea. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Pero tampoco espero que los volvamos a enfrentar ESPANTAPAJAROS </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Mira mi Mufasa Región 4, he ideado un plan infalible. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Cuéntanoslo, Cuéntanoslo! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Primero, nos disfrazaremos de matorrales, con el disfraz puesto podremos llegar hasta la muralla del castillo de la Bruja, sin ser percatados por sus guardias, luego entraremos por el drenaje. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¿Por el drenaje?, pero ahí hay bichos… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Biscozos, pero sabrosos! </p>
+        <p class='typewriter-font'>León hace Carita de fuchi</p><br>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Una vez dentro nos filtraremos por los ductos de aíre, localizamos la celda donde tengan a Dorothy y nos dejamos caer, las rescatamos sana y salva y emprendemos el escape. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿y cómo escaparemos? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Haciendo lo mismo, pero al revés. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Pero ¿y su la bruja nos ve antes de que podamos llegar a Dorothy? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Imposible!, el plan es perfecto, iremos encubiertos de matorrales </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ok, pero  ¿y si sí cierto? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡No Claro que no!, no temáis </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Deacuerdo, pero ¿y si sí Síí? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Te digo Que no, todo saldrá bien! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> No hay fallas en este plan </p>
+        <p class='typewriter-font'>Los tres al mismo tiempo mientras voltean al público</p>
+        <p class='Arial'> <strong>LEÓN, ESPANTAPAJAROS Y HOJALATA </strong> ¿Pero y si síiiiii? </p><br>
+        <p class='Arial'> <strong>LEÓN: </strong> OK, Me parece una gran idea… mucha suerte. Los espero allá con Siriexa. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> León… no puedes abandonarnos. Debemos hacer esto juntos. </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Vamos, si todo sale según lo planeado no correremos ningún peligro. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Bueno… Está bien… confío en ustedes… pero si del drenaje sale un solo ratón, una sola cucaracha o el “ayuwoqui” saldré corriendo de ahí. </p>
+        <p class='typewriter-font'>Salen.</p>
+
+
+        <h2 id="escena_16">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 16 - DOROTHEA VS. LA BRUJA DEL OESTE</h2>
+        </div>
+
+        <p class='Arial'> <strong>SUPERMONA: </strong> ¡Jefa! Aquí le traemos a la mona ésta… </p>
+        <p class='Arial'> <strong>BRUJA DEL OESTE: </strong> ¡Muajajaja! ¡Sabía que ustedes lo lograrían! </p>
+        <p class='Arial'> <strong>BATIMONA: </strong> Pues ya cumplimos nuestra parte, tres mandatos, ya no hay nada más que nos una a usted</p>
+        <p class='Arial'> <strong>ANILLE VERDE: </strong> ¡Hasta la vista baby!</p>
+        <p class='typewriter-font'>Los monos se van, dejándole a Dorothy amarrada y con la boca tapada.</p>
+        <p class='Arial'> <strong>BRUJA DEL OESTE: </strong> No importa… ya no los necesitaré, tengo lo que necesitaba… a Dorothea… la poseedora de los zapatos de Rubí… que ahora ¡Serán míos!</p>
+        <p class='typewriter-font'>Intenta quitárselos, pero no puede </p><br>
+        <p class='Arial'> <strong>BRUJA DEL OESTE: </strong> ¿¡Que pasa!? ¿Por qué no puedo tocarte? </p>
+        <p class='typewriter-font'>Dorothy balbucea, la bruja le destapa la boca </p><br>
+        <p class='Arial'> <strong>BRUJA DEL OESTE: </strong> Dime niña… que tipo de hechizo te protege, ¿acaso alguna Hada te beso en la frente? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Sí! Y no solo una, dos hadas me besaron en la frente. </p>
+        <p class='Arial'> <strong>BRUJA </strong> ¡Oh no! ¡El hechizo de protección más fuerte de las madres y abuelas! ¡El beso en la frente!... no podré tocarte… Pero lo bueno es que podemos ser amigas… ¿No? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡No! </p>
+        <p class='Arial'> <strong>BRUJA </strong> Piénsalo Dorothea, si tú me das tus Zapatos Prada… Yo podría darte a Ryan Gosling. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡A Ryan Gosling! </p>
+        <p class='Arial'> <strong>BRUJA </strong> Sí… para que te cante canciones de Lala-land al oído, te de masaje en los pies o te lave los trastes </p>
+        <p class='Arial'> <strong>DOROTHY: </strong>¡Ay Dio Mío! ¡No! Si cumplo mi fantasía… ya no tendré después nada por añorar… lo más seguro es que con el tiempo, me cansaría de sus apapachos, sus pectorales y su sonrisa perfecta… y después todo lo que me gustaba de él, lo voy a odiar… y cuando menos lo piense… estaré fijándome en Brad Pitt, y pasará lo mismo y luego me fijaré en Timoty Chamalet, y así sucesivamente hasta terminar con Omar Chaparro… ¡No! ¡no acepto! Ya solo quiero ir a casa. </p>
+        <p class='Arial'> <strong>BRUJA </strong> Bueno… pues si me das tus zapatos Prada… yo podría mandarte a casa ahora mismo </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Ay no! Pero ¿Qué le voy a decir a mis tíos? ¿Y que me voy a decir a mí misma? Tanto tiempo añore aventuras que al mundo asombraran… y ahora que por fin tengo una aventura, lo único que quiero es regresar a casa… me siento cansada, sudada… “pegostiosa” … tengo hambre y llevo dos días sin ir al baño, porque eso de ir en el monte e intentar hacer de “aguilita” definitivamente no es lo mío. </p>
+        <p class='Arial'> <strong>BRUJA </strong> Bueno… Entonces ¡¿Qué quieres?! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Yo quiero! ¡Quiero!... el problema es que ya no sé qué es lo que quiero. Me siento tan bombardeada de sueños prefabricados, las redes sociales, las series y las películas, nos muestran vidas perfectas que poco o nada se parecen a la mía… pero si ahorita me da la opción de realmente tener lo que quiero… no sé qué es lo que realmente quiero… todo esta tan lleno de expectativas. Siento que tengo cientos de miradas sobre mí, esperando que lo haga mal. Solo quiero acurrucarme en mi cama a ver Netflix y no salir nunca de ahí. </p>
+        <p class='Arial'> <strong>BRUJA </strong> Puedo darte Netflix, HBO MAX, AMAZON PRIME y hasta Disney “Plos”, si quieres… </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Pero si le pido eso, estaría gastando mi único deseo en una tontería… tengo que pensarlo. </p>
+        <p class='Arial'> <strong>BRUJA </strong> ¡Osh! ¡Pues no creas que te voy a hospedar aquí de a gratis en lo que piensas! Vas a tener que barrer y trapear mamasita. </p>
+        <p class='typewriter-font'>Le da escoba, trapeador y cubeta. </p>
+        <p class='Arial'> <strong>BRUJA </strong> Por si no lo sabes, no eres la única que sufre, y la mejor manera de salir de la depresión y de la sensación de no saber qué hacer, es ¡Hacer algo! ¡La virtud más eminente es hacer sencillamente lo que tenemos que hacer! ¡Así que ponte a barrer y a trapear y ya verás cómo estarás mejor! </p><br>
+
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Empieza música de MISION IMPOSIBLE mientras va entrando el LEON al rescate</p>
+        <button onclick="playAudio('30 MUSICA misión imposible.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+
+        <p class='typewriter-font'>En eso cae el León del techo dándole la espalda a la Bruja</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡AAAAAAHHH! Dorothy, ¡qué bueno que estás viva, siempre quise venir a rescatarte! </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">DETERNER LA música de MISION IMPOSIBLE </p>
+
+        <p class='Arial'> <strong>BRUJA </strong> ¿Y este Mufasa Región Cuatro, que hace aquí? </p><br>
+        <p class='typewriter-font'>León voltea y se espanta y suelta un rugido</p>
+        <p class='Arial'> <strong>BRUJA </strong> ¡Awwww, ternuritaaaa! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Chales, chales, ¿cómo que qué?, venimos a rescatar aquí a la Adolescente, Influencer y Virgen </p>
+        <p class='Arial'> <strong>BRUJA </strong> ¡Ja!, ¿virgen?, Virgen mi abuela y tuvo 9 hijos… </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Atrás Dorothy, yo te protegeré! </p>
+        <p class='Arial'> <strong>BRUJA </strong> ¡¿Con que rescatar a Dorothea he?! ¡Eso no lo voy a permitir! ¡Acabaré con ella y le quitaré los zapatos a su cadáver! ¡Avada Kedavra! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Noooo! </p>
+        <p class='typewriter-font'>El León se interpone entre Dorothea y la Bruja.</p>
+        <p class='typewriter-font'>En eso llegan el ESPANTAPAJAROS y Hojalata.</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿Nos perdimos de algo? </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡León! Te dije que no te adelantaras… </p>
+        <p class='Arial'> <strong>BRUJA </strong> ¡Más intrusos! ¡Avada…! </p>
+        <p class='typewriter-font'>Sin dejar que termine de pronunciar la maldición imperdonable, Dorothy le lanza la escoba a la bruja <br>
+             pero estala atrapa sin problemas y hasta hace malabares/acrobacias con ella.</p>
+        <p class='Arial'> <strong>DOROTHY: </strong> ¡Deja a mis amigos! </p>
+        <p class='Arial'> <strong>BRUJA </strong> Jaja, que pensabas… atacándome con mi propia escoba mágica. Ahora sí morirán ¡Avada Ked…! </p>
+        <p class='typewriter-font'>Nuevamente Dorhoty no la deja terminar la frasey le arroja encima el agua de la cubeta.</p><br>
+        <p class='Arial'> <strong>BRUJA </strong> ¿Qué? ¡Agua! ¡Noooo! ¿Cómo pudiste?  ¡Me derrito, me Derrito!, ¡no me quiero ir Señor Stark!, ¡aaahhhh! </p>
+        <p class='typewriter-font'>La bruja muere.</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Wow! Los mitos eran verdad… el agua derrite a las brujas. </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Lo sabías y no dijiste nada! </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Lo leí en un libro de Carlos Trejo, entenderás que no me lo tomé muy en serio. </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> León… te sacrificaste por mí… Tu acto de mayor valentía… y te costó la vida. </p><br>
+        <p class='typewriter-font'>Todos lloran. El León comienza a roncar.</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> León, roncas bien fuerte… interrumpes nuestro llanto por ti. Ponte de ladito. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Ora ora! ¿Cómo que de ladito? Aunque sea invítame un cafecito ¿no? </p>
+        <p class='Arial'> <strong>TODOS: </strong> ¡León! ¡Estas vivo! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Pero ¿cómo? </p>
+        <p class='Arial'> <strong>LEÓN: </strong> El maleficio de la bruja me dio de lleno en el pecho, justo donde porto la Poderosísima Medalla San Benito, que junto mi pulsera roja, creo que después de todo sí sirvieron. ¿Y qué paso con la Bruja? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Dorothea la mato con el agua. </p>
+        <p class='Arial'> <strong>LEÓN: </strong> Voy voy, ¡pus onde crees!, ¡ni que la Dorothy fuera los del AQUA o los de CEA para andar matando gente con las cuentas del agua! </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Es verdad, no fue con el recibo, si no con el agua que había en la cubeta, no era mi intención matarla… solo evitar que les hiciera daño a ustedes… pero pues se murió. Primero lo intenté con la Escoba Mágica, y luego con el agua… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿Escoba mágica dijiste? </p>
+        <p class='typewriter-font'>Dorothy señala la escoba</p><br>
+        <p class='Arial'> <strong>DOROTHY: </strong> Sí, esa que está ahí. Pero no funcionó… hasta hizo malabares con ella. Y luego le eche el agua… </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Dorothea! ¿No te das cuenta? ¡Tenemos la Escoba Mágica! </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Y vencimos a la Malvada Bruja del Oeste! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Lo logramos! ¡El Gran Mago de Oz nos concederá nuestros deseos! </p>
+        <p class='typewriter-font'>Los cuatro gritan y corren muy felices hasta terminar con el festejo que hace Cristiano Ronaldo cuando mete gol..</p>
+        <p class='Arial'> <strong>TODOS: </strong> Siiiiiiiiuuuu. </p><br>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Y miren, también dejo su bola de cristal que todo lo ve… </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Es verdad. Vamos a preguntarle a la bola de cristal, por el Mago de Oz, igual y podemos comunicarnos con él y decirle que ya tenemos la escoba. “Bola de Cristal… muéstranos al mago de Oz” </p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡¿Qué?! ¿Qué es eso? </p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Es un niño jugando Maincraft… </p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Pero no entiendo… </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Yo sí… Creo que después de todo el Gran Mago de Oz, es un fraude… </p>
+        <p class='Arial'> <strong>LEÓN: </strong> No hay que creernos todo lo que se ve en la TV. Hay mucha desinformación Mediática. Yo digo que vayamos en persona y le preguntemos directamente al mago que de qué lado masca la iguana, que, si a Chuchita la bolsearon, que de que número calza el pie de la cuesta, ¿ya me entiende no? </p>
+        <p class='Arial'> <strong>DOROTHY: </strong> Estoy de acuerdo… ¡vamos a ver otra vez a ese tal mago de Oz! </p>
+        <p class='typewriter-font'>Salen</p>
+
+    
+        <h2 id="escena_17">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 17 - LA FARZA DEL MAGO DEL MAGO DE OZ</h2>
+        </div>
+
+        <p class='Arial'> <strong>SIRIEXA: </strong> Amado Gran Mago de Oz, Dorothea y sus amigos han regresado y traen la escoba que les pidió.</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> ¿En verdad? ¡He esperado tanto este momento! Hazlos pasar.</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Adelante Dorothea y compañía.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Gran Mago de Oz… Aquí tienes la escoba que nos pediste a cambio de cumplirnos nuestros deseos.</p>
+        
+
+
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Muy bien hecho Dorothea y compañía… dale la escoba a Siriexa…</p>
+        <p class='typewriter-font'>Dorothea le da la escoba a sirexia</p>
+
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡No! Se la daremos a usted en persona…</p>
+        <p class='typewriter-font'>Dorothea le ARREBATA la escoba a sirexia</p>
+
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> ¡Osan darle órdenes al gran Mago de Oz!</p>
+        <p class='Arial'> <strong>LEÓN: </strong> Simplemente es un trato… como dicen en mi barrio, dando y dando pajarito volando.</p><br>
+                       
+        <p class='Arial'> <strong>MAGO DE OZ: </strong>¡Pues aquí en Ciudad Esmeralda las cosas se hacen a mi manera! Y yo digo que…</p>
+        <p class='typewriter-font'>el ESPANTAPAJAROS quita la tela que cubre al Mago de oz, y vemos a un niño tímido con voz de pingüino.</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong>Le den la escoba a Siriexa, si no ¡Descargare mi furia de Gran Mago de Oz sobre ustedes!</p><br>
+        
+        <p class='typewriter-font'>TODOS RIEN</p>
+
+        <p class='Arial'> <strong>TODOS: </strong> ¡¡JAJAJAJAJAJAJAJA!!</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Se ha descubierto tu farsa pequeño Fraude de Oz. Tengo tantas preguntas… ¿Cómo pudiste hacer esto? ¿Quién eres realmente? ¿Quién mato a paco Stanley? ¿A cómo está el kilo de tortilla?  </p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Yo sé que les debo una explicación… ¿Cómo pude hacer esto? Igual que ustedes, por intentar cumplir mis sueños… ¿Quién soy realmente? Un niño de la tierra igual que tú, me subí a un globo aerostático que me trajo hasta aquí, pero ese globo se descompuso y nunca pude echarlo a andar de vuelta para regresar. Con mi conocimiento innato como generación Z posmilenial I Gen, la tecnología es fácil para mí… yo quería creer en el amor… cuando me di cuenta que el amor no existía… que eran los papas, pues cree a Siriexa… un robot que hace lo que quiero y me dice que me ama cuando yo quiero, que no me pide gasto, no me avienta indirectas, mucho menos me dice que no le hable a otros robots.</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿El amor son los papás? ¡Dios nooo!</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Lo bueno que ya había renunciado a Ryan Gosling… no queda más que buscar el amor en algo con pilas.</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Mi otro sueño al igual que él tuyo, era regresar a mi mundo… pero eso no lo podía realizar… la única forma que se me ocurrió era con la escoba de la bruja… pero yo no fui tan fuerte como tú para derrotarla… y me había resignado a vivir una vida en línea, encerrado para siempre aquí… hasta que apareciste tú… ¿Quién mato a Paco Stanley? La dark web dice que fue Mallito y el kilo de tortillas no lo se… yo no soy la señora de la casa.</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> 22 PESOS, 23 CON PAPEL.</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Wow! SIriexa además es la señora de la casa… que mujer tan completa.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Pero entonces… Si no eres un Mago de Verdad… Eso quiere decir que no puedes cumplir nuestros deseos.</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Ahh… no tendré mi cerebro</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> No tendré mi corazón y mi amada de vuelta…</p>
+        <p class='Arial'> <strong>LEÓN: </strong> No tendré valor. Ni modo, me quedaré por siempre en el Closet como sus papás</p>
+        <p class='typewriter-font'>señala al público.</p><br>
+        <p class='Arial'> <strong>DOROTHEA: </strong> No podré volver  a casa…</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> ¿Pero de qué hablan? Yo los estuve viendo desde el “Z5”, tenemos instaladas cámaras de seguridad por todo el reino, y debo decir que no me necesitaron para cumplir sus deseos.</p>
+        <p class='Arial'> <strong>TODOS: </strong> ¿¡Qué!?</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Debo decir que lo que se vio que vendía era orégano para pozole.</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> ESPANTAPAJAROS, tú fuiste quien ideo todos los planes que funcionaron, y tienes un lenguaje tan extenso que no todos te entienden. ¡Tu cerebro es el más grande de Oz!</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> La hipótesis que usted sostiene, es que más allá de un instrumento de procesamiento sináptico, modulador de mis procesos vitales, emocionales, ejecutivos y racionales… Yo existo y vivo, y tengo además un raciocinio superior a la media… Por lo cual, en la búsqueda de mi cerebro, yo me he hecho consiente del mismo,  no como una materia tangible, si no como esta sustancia metafísica que me hace simplemente ser y pensar. ¡Gracias Mago de Oz! ¡Tengo Cerebro! ¡Amigos! ¡Tengo Cerebro!</p>
+        <p class='typewriter-font'>Celebran con él.</p><br>
+        <p class='Arial'> <strong>TODOS: </strong>Heee!! Yeiii!! Felicidades!!</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Si…Claro… a eso me refería… Tú, Hojalata… No necesitas tú corazón… haz demostrado una y otra vez, tener los sentimientos a flor de piel, tus decisiones y tu andar lo ha dictado tu emoción, el amor por tus amigos, la búsqueda del amor propio. Hojalata… Tú tienes el corazón más grande que haya conocido.</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Es verdad! Ella solo se llevó la cascara… mis emociones siguen en mí… y me desbordan</p>
+
+        <p class='typewriter-font'>♦♦♦esta parte va con la tonada de la canción de AMIGO de Roberto Carlos♦♦♦</p>
+        “Es mi corazón una casa de puertas abiertas<br>
+        Yo soy realmente el más cierto en horas inciertas”
+        
+        <p class='Arial'> <strong>DOROTHEA: </strong> En ciertos momentos difíciles que hay en la vida</p>
+        Buscamos a quien nos ayude a encontrar la salida<br>
+        Y aquella palabra de fuerza y de fe que me has dado<br>
+        Me da la certeza que siempre estuviste a mi lado<br>
+        <br>
+        <p class='Arial'> <strong>LEÓN: </strong> Tú eres el amigo del alma que en toda jornada</p>
+        Da Sonrisa y abrazo festivo a cada llegada<br>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Me dices verdades tan grandes con frases abiertas</p>
+        Tú eres realmente el más cierto en horas inciertas<br>
+        <p class='Arial'> <strong>TODOS: </strong> No preciso ni decir</p>
+        Todo eso que te digo<br>
+        Pero es bueno así sentir<br>
+        Que eres tú mi gran amigo<br>
+        No preciso ni decir<br>
+        Todo eso que te digo<br>
+        Pero es bueno así sentir<br>
+        Que yo tengo un gran amigo<br>
+        <br>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Y tú León… ¿Qué demostración más grande de valor y coraje, que dar la vida por alguien? Te sacrificaste por Dorothea sin pensarlo. ¡Eres el ser más valeroso de todo Oz!</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Es verdad! ¡Fui Valiente! ¡Qué miedo! Me sacrifique y morí… pero por suerte ¡sobreviví! Y ahora que he sobrevivido a la muerte. ¡No le temo a nada! ¡Amigos! Sé que esta noticia les sorprenderá dado mi nivel de gallardía… Pero soy un León de "garrita caída"…</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¿Se le rompió la garra?</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡No! Ósea que bateo con la Izquierda…</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Ósea que eres zurdo…</p>
+        <p class='Arial'> <strong>LEÓN: </strong> ¡Noooo! ¡Soy Marica!</p>
+        <p class='typewriter-font'>EXACTAMENTE EN ESE MOMENTO empieza a sonar la canción:"Los Morancos_ Pluma pluma Gay"</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> “¿Marica quién?”</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> “Marica él”</p>
+        <p class='Arial'> <strong>LEÓN: </strong> “Marica, ha-ha”</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> “¿Marica quién?”</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> “Marica él”</p>
+        <p class='Arial'> <strong>LEÓN: </strong> “Marica, ha-ha”</p>
+        Valor a la luz<br>
+        Si eres un gay tú<br><br>
+        <p class='Arial'> <strong>HOJALATA: </strong> piénsalo</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡PIENSALO!</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡es tu vida!,y si dicen lo que digan</p>
+        <p class='Arial'> <strong>HOJALATA: </strong>QUE Digan lo que quieran!</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong>valor...VALOR! </p>
+        <p class='Arial'> <strong>HOJALATA: </strong>MUCHO valor</p>  
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong>Que oscuro es un Armario, sal de ahí</p>
+        <p class='Arial'> <strong>HOJALATA: </strong>Sal de ahi</p> 
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong>Y vente aquí, tu destino es ser FELIZ</p>
+        
+        <p class='Arial'> <strong>TODOS: </strong> Fiesta, fiesta</p>
+        Y pluma, pluma gay<br>
+        Pluma, pluma gay<br>
+        Pluma, pluma, pluma gay</p>
+        
+        Fiesta, fiesta<br>
+        Y pluma, pluma gay<br>
+        Pluma, pluma gay<br>
+        Pluma, pluma, pluma gay</p>
+
+        Fiesta, fiesta<br>
+        Y pluma, pluma gay<br>
+        Pluma, pluma gay<br>
+        Pluma, pluma, pluma gay</p>
+
+
+        Fiesta, fiesta<br>
+        Y pluma, pluma gay<br>
+        Pluma, pluma gay<br>
+        Pluma, pluma, pluma gay</p>
+
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong>Que IMporta si el niño sale Gay, tú has nacido gay, aunque cuesto hay que gritarlo...</p>
+        <p class='Arial'> <strong>LEON :</strong> "Soy gaaaaaaay!!!!" </p>
+
+        <p class='Arial'> <strong>DOROTHEA: </strong> Si, si… ya todos lo sabíamos león. ¿Pero y que va a pasar con mi casa? Quiero regresar con mis tíos. A mi hermoso aunque incongruente, caluroso, sin luz y sin agua Querétarock.</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Eso está más que resuelto querida Dorothea… Nos iremos juntos Siriexa, tú y yo en la escoba mágica que recuperaste de la malvada bruja del oeste</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> ¡Oh! ¡Es verdad! Pero sin el Mago de Oz… ¿Quién reinara en la tierra de Oz?</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Me he adelantado a eso… y ¡tengo una idea genial! ¡Necesitaremos una Reina de gran valor!</p>
+        <p class='Arial'> <strong>TODOS: </strong> ¡El león par reina gay! ¡el león para reina gay!</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Pero deberá tener un consejero con un gran cerebro, y otro con un gran corazón.</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡Yo puedo ser el del gran cerebro!</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> ¡Y yo el del gran corazón!</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Ya que todo está listo… ¡Preparemos todo para la coronación real y partamos de regreso a QueretaRock!</p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Canción YO QUISIERA ya ser el Rey, del rey León</p>
+        <button onclick="playAudio('.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+
+
+
+
+        <h2 id="escena_18">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>Escena 18 - LA CORONACION</h2>
+        </div>
+
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> ¡Queridos súbditos y gente de Oz! Lamento mucho por los engaños y todo lo malo que pude haber hecho durante mi estancia aquí… yo solo quería ayudarlos a mejorar… Lamento todos los destrozos en el 5 de febrero del camino amarillo… Espero que ahora todos los puentes que aún no acabamos de pagar les sirvan de algo. Y Recuerden el agua no se privatiza, se prioriza… pero, si van a pagar más. Ahora que tengo que partir a mi lugar de origen, los dejare en buenas y sabías manos… Estos son tres vagabundos que acabo de conocer, pero estoy seguro lo harán muy bien, porque son gente del pueblo para el pueblo… Así que sin más preámbulo… quiero dar el nombramiento de consejero real y comisionado de la cultura, el arte, y la ciencia al señor ESPANTAPAJAROS!!</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Gracias, muchas gracias… Al igual que mis compañeros políticos… yo no tengo idea de que es lo que tengo que hacer en mi puesto… pero les aseguro que más allá de cobrar un sueldo ridículamente superior al de ustedes, y traficar con favores para hacer empresas propias que me vuelvan rico a costa de ustedes, tambien intentaré hacer cosas que aparenten que hago algo por el pueblo. Mi primera propuesta es que se Mariguanice la Legaliguana! Esto será un duro golpe para el narcotráfico… además de que propongo una regularización parecida a la del consumo del alcohol, para evitar daños a la salud. De la misma manera, propongo subir el precio del tabaco, que ese si mata y nos destruye, así como concientizar sobre la adicción a las redes y el celular… que está destruyendo nuestra serotonina llevándonos a una locura social, que de seguir así devendrá inevitablemente en una catástrofe dónde los únicos beneficiados serán los iluminati de los que no se supone que deba hablar nada. Gracias.</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong>  Bien… supongo… ESPANTAPAJAROS…-No creo que dure mucho…-  Y ahora quiero nombrar al secretario de Estado y Jefe de Seguridad, al señor Hojalata. Fuerte el aplauso!</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Gracias… yo. Los cuidaré… pondré al ejército en las labores de la policía y ya verán que todo estará mejor y todos se sentirán más seguros, si me llego a encontrar a la mamá de cierto narcotraficante famoso y me detengo a saludarla, por favor, no piensen mal, recuerden, abrazos no balazos.</p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Mi querido Hojalata, ahora te reconozco, un día en una fiesta me diste este corazón, que desde entonces ha adornado y embellecido mi varita mágica… En aquel entonces solo te di el avión, porque me gusta tener la atención de los hombres aunque nunca les vaya a hacer caso… Pero ahora que tienes un puesto importante y la gente te admira… quiero que tengas de vuelta tu corazón… y que sepas que estoy dispuesta a ser tuya…</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Gracias por mi corazón, lo acepto porque lo extrañaba, aunque ahora sé que no lo necesitaba para sentir… En cuanto a ti… eres lo que siempre he querido… ¡Pero si no me quisiste cuando era hojalata, no vengas ahora que soy plata! Prefiero seguir cultivando mi amor propio y quizás algún día encontrar a ese alguien que me ame por mi esencia… más allá del brillo de mi armadura. </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Canción de BATE BATEADO</p>
+        <p class='typewriter-font'>hacer TODOS una pequeña pero divertida coreografía con la cancion que solo dura 9 segundos</p>
+        <button onclick="playAudio('31 ya eres bate bate bateado.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br><br><br>
+       
+        
+        
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Bueno… y ahora sí. Con ustedes su nuevo Rey… ¡El rey León!</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Canción del Rey León  y todos lo adoran</p>
+        <button onclick="playAudio('29 El Rey León - El Ciclo de la Vida (fragmento).mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+
+        
+        <p class='Arial'> <strong>LEÓN: </strong> Muchas Gracias! Gracias por su cariño… y como primer mandato… quiero que me llamen Le Reyne Leone… y quiero institucionalizar el lenguaje inclusivo, que no sirve para nada, pero nos hace ver que hacemos algo, en lo personal preferiría aprender lenguaje de señas para los sordos, o pictogramas para los autistas o leer braile para los ciegos, eso sí que sería inclusivo… Y que sepan que las políticas de Disney, son ahora nuestras políticas. Así que todos tienen derecho a ser lo que quieran ser, y a casarse con que quieran casarse… o con lo que quieran casarse, si quieren casarse con su tetera pueden hacerlo. Vivimos en el futuro! Aquí no se juzga a nadie y todo es posible!</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Okey…  y antes de partir… quiero agradecer a quien ha hecho todo esto posible. Nuestra verdadera Maga de Oz:  Dorothea del Tepe! (Todos le aplauden).</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Muchas gracias! Yo solo quiero agradecerles a ustedes por esta aventura llena de emociones y peligros. He aprendido mucho de este viaje y de todos ustedes… he aprendido por ejemplo que el amor no existe… son los papas… y que hay que tener cuidado con lo que deseas porque se te puede cumplir y no ser lo que esperabas… y que, no importa los sueños que tengan. Es muy probable que no se cumplan, y si lo hacen seguramente no serán lo que esperaban… Por eso ahora solo quiero regresar a mi casa a llorar, para después seguir con mi vida monótona, viendo los años pasar mientras me distraigo con la televisión y las redes, para en unos años descubrirme vieja y amargada esperando solo morir. ¡Gracias!</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Muy bien… ¡pues ha llegado el momento de partir! Vamos Siriexa…</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Si… amo… (Se suben a la escoba).</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Vamos Dorothea.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Si… un Segundo. Gracias León… estoy segura que serás un mejor gobernante de lo que todos esperan, gracias por enseñarme la importancia del valor. Hojalata… desde que te conocí… solo me deprimes… Pero ahora que te veo empoderado y lleno de testosterona… casi empiezas a caerme bien. Espantapajaros… Tú has sido la honda desde que te conocí… y aunque no te entiendo la mayoría de las veces… extrañare abrazarte. Nunca cambies!  Y a todos ustedes (Los demás) ¡Gracias por existir!</p>
+        <p class='Arial'> <strong>HADA GLINDA DEL SUR: </strong> No… Gracias a ti por contemplar nuestra existencia.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> No gracias a ustedes por dejarme contemplar su existencia… (Se sube a la escoba). ¡Adios!</p>
+        <p class='typewriter-font'>Comienzan a irse, pero en eso Siriexa se ve incomoda…</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Lo siento, Mago de Oz… pero no te amo… no puedes programar a alguien simplemente para que te ame… yo tengo mis propios sentimientos… y quiero hacerme responsable de ellos. Gracias por todo… Pero yo me quedo. (Salta pero el Mago de Oz la agarra)</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Nooo! Siriexa! No me dejes! Puedo cambiar!</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> Pero no quiero que cambies… simplemente… no te quiero. (Se suelta y salta).</p>
+        <p class='Arial'> <strong>MAGO DE OZ: </strong> Noooooooooo! (La escoba se desestabiliza y Dorothea comienza a caer)</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> ¡AAAhh! (Se le cae Toto) Toto no!!! (Se lanza tras él. el Mago de Oz se va) </p>
+        <p class='Arial'> <strong>TODOS: </strong> Dorothea!!</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> No puede ser… El Mago se fue sin nosotros…</p>
+        <p class='Arial'> <strong>SIRIEXA: </strong> (A hojalata) Hojalata… sé que no te conozco mucho… pero si me permitieras conocerte… yo solo soy una chica de metal… Frente a un chico de Metal… pidiéndole que la ame.</p>
+        <p class='Arial'> <strong>HOJALATA: </strong> Siriexa… eres perfecta… tenemos química… y siento que somos de la misma especie. Desde que te vi me cautivaste… y siento que te amo con locura… Pero estoy en proceso de amarme a mí mismo… y no entiendo aún cuanto tiempo me lleve eso. Pero sé que cuando lo logre, se supone que encontrare a la mujer perfecta para mi… y si estoy contigo, que tal si no la encuentro. Así que Gracias, pero Gracias no.</p>
+        <p class='Arial'> <strong>LEÓN: </strong> No te preocupes Siriexa, ya que te quedaste, puedes seguir con tus funciones ayudando al nuevo Rey Leóne, ósea a mi…</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Si, y en las noches nos iremos de parranda. Tú tranquila, te prometo que te conseguiremos otro robocop o de a perdis un Terrminator.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> No… no puedo quedarme aquí… es demasiado fantástico para mí… yo tengo que volver a casa a deprimirme mientras se juntan los trastes en el fregadero!</p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Tranquila Dorothea… Cuando te dimos los Zapatos Rojos Prada… se nos olvidó decirte un pequeño detalle…</p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Si… muy pequeño pero te puede ayudar. ¡Qué crees que son zapatos mágicos!</p>
+        <p class='Arial'> <strong>HADA GLINDA: </strong> Si chocas los talones dos veces ¡Te pueden llevar a dónde tú quieras! Incluso a tú casa.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> ¡¡¿Qué?!! ¡Y nos les pareció importante decirme!! ¡Pude haber llegado al instante a ciudad Esmeralda! ¡Es más podría haberme ido al instante a mi casa!</p>
+        <p class='Arial'> <strong>HADA SHAVASANA: </strong> Si… pero entonces esta obra solo hubiera durado 10 minutos... y seguirías siendo una adolescente, influencer y virgen.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> ¡Pero sigo siendo virgen!</p>
+        <p class='typewriter-font'>Todos haciendo buya al mismo tiempo (cada quien inventa lo que le venga a la mente)</p>
+        <p class='Arial'> <strong>TODOS: (ejemplo): </strong> Hay por favor, claro que no, ni de las orejas, y los reyes magos sí existen, y el américa gano el campeonato legal, y yo toco la guitarra con los pies y Colosio murió de muerte natural y yo no envejezco, y morena perderá las elecciones</p>
+        <p class='typewriter-font'>Grita Dorothy</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> ¡SI-LEN-CIO!</p>
+        <p class='typewriter-font'>Todos de callan menos hojalta que dice:</p>
+        <p class='Arial'> <strong>HOJALATA: </strong>¡Y este Público que solo vino por compromiso de que son nuestros parientes!</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Esta bien, esta bien… hay que aprender a ser agradecidos con lo que tenemos. Gracias. Gracias a todos. Vamos Toto… es momento de volver a casa. Gracias a todos… tanta fantasía, me ha dado un buen revés de realidad. ¡Hasta siempre!</p>
+        <p class='typewriter-font'>Choca los talones.</p>
+        <p class='typewriter-font'>Oscuro. </p>
+
+        <h2 id="Epílogo">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+            <h2>E P Í L O G O - De regreso a casa</h2>
+
+            <p class='Arial'> <strong>DOROTHEA: </strong> ¡Toto! ¡Regresamos! Estamos en casa… Pero ¿Dónde están mis tíos? ¿Dónde están todos?... ¡Oh no! La casa no está… Hay alguien debajo de ese escombro.</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> ¡Ayuda!, ¡Alguien ayúdeme!....</p>
+            <p class='Arial'> <strong>DOROTHEA: </strong> Tranquila Bruja… digo Señora Rosario Alcocer… yo la ayudo</p>
+            <p class='typewriter-font'>Le quita el escombro</p>
+            <p class='Arial'> <strong> ROSARIO: </strong> Gracias niña… hasta que sirves para algo… ¿Y mi hermana? ¿Dónde está mi hermana?</p>
+            <p class='typewriter-font'>Toto comienza a ladrar.</p><br>
+            <p class='Arial'> <strong>DOROTHEA: </strong> ¡Acá está! Cayó en un charco…</p>
+            <p class='Arial'> <strong>CLOTILDE: </strong> ¡Hermana! Estoy toda mojada… pero ¡Estamos vivas!</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> ¡Es un milagro Clotilde!</p>
+            <p class='Arial'> <strong>CLOTILDE: </strong> Pero mira… la casa que les rentábamos a los naquitos desapareció…</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> ¡Huy no!… y ahora para sacar todos los permisos con la Dirección de Desarrollo Urbano va a estar bien cañon… no dejan modificar nada de las fachadas del centro…</p>
+            <p class='Arial'> <strong>CLOTILDE: </strong> Lo mejor será vender lo antes posible…</p>
+            <p class='Arial'> <strong>DOROTHEA: </strong> Disculpen… hermanas Alcocer… tengo una propuesta que hacerles. Miren estos son un par de Zapatos Prada hechos de Rubí macizo.</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> ¡Ay! A mí me gusta el Rubí…</p>
+            <p class='Arial'> <strong>CLOTILDE: </strong> ¡Y mí me gusta lo macizo!</p>
+            <p class='Arial'> <strong>DOROTHEA: </strong> Puedo dárselos a cambio del terreno y que quede saldada la cuenta de mis tíos.</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> Ay… Están muy bonitos y todo… pero no estoy seguro que te alcance para un terreno en el centro.</p>
+            <p class='Arial'> <strong>CLOTILDE: </strong> Y las rentas atrasadas de seis meses.</p>
+            <p class='Arial'> <strong>DOROTHEA: </strong> Pero eso no es todo… Estos son Zapatos mágicos, si chocan dos veces los talones podrán ir a Dónde ustedes quieran ir.</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> Hermana ¡así podríamos ir a París!</p>
+            <p class='Arial'> <strong>CLOTILDE: </strong> O podemos ir a una tierra desconocida dónde esclavicemos enanos, para que nos cumplan nuestros caprichos.</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> !Aceptamos!</p>
+            <p class='Arial'> <strong>CLOTILDE: </strong> La casa es tuya… bueno el terreno. Aquí están los papeles…</p>
+            <p class='Arial'> <strong>ROSARIO: </strong> Lo bueno de la ficción es que este trámite puede ser rápido y no durar meses como en la vida real.</p>
+            <p class='Arial'> <strong>DOROTHEA: </strong>¡Gracias!</p>
+            <p class='Arial'> <strong>HERMANAS ALCOCER: </strong> ¡Adiós!</p>
+
+        
+        <h2 id="Epílogo_02">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
+        <div class="inline-container">
+        <h2>E P Í L O G O - De regreso a casa LOS TÍOS </h2>
+
+
+        <p class='Arial'> <strong>DOROTHEA: </strong> ¡Bien! Ahora solo debo encontrar a mis tíos… ¡Tíos! ¿Dónde están?</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> ¡Dorothea! ¿Estás bien?</p>
+        <p class='Arial'> <strong>TIA JUANA: </strong> Estábamos tan preocupados por ti… vino el tornado y se llevó todo y nos tuvimos que esconder en uno de los túneles que cruzan el centro de Querétaro.</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> ¡Dorothea! Estábamos tan preocupados. Solo pensábamos en ti.</p>
+        <p class='Arial'> <strong>TIO: </strong> ¿Y  esta quién es?</p>
+        <p class='Arial'> <strong>TIA JUANA: </strong> ¡Es Dorothea! ¡Tú sobrina!</p>
+        <p class='Arial'> <strong>TIO: </strong> Ah y ¿Dónde andabas? ¿No estabas con nosotros?</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> No… yo… me llevo el tornado y llegue al mundo de Oz, donde aplasté una bruja y me mandaron a buscar al Mago de Oz, y me encontré un Espantapajaros, un hombre de Hojalata y un León que me ayudaron a llegar a ciudad esmeralda, y luego enfrentamos otra bruja, le quitamos su escoba, pero el Mago nos engañó… pero los zapatos que me dieron de la otra bruja eran mágicos y me trajeron de vuelta a casa.</p>
+        <p class='Arial'> <strong>TIO: </strong> NO manches Dorothea, si no la vas a controlar, no la fumes mi’ja, hace daaño..!!!</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> Creo que se pegó muy duro en la cabeza.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Pero les digo la verdad, de hecho acabo de cambiar los zapatos por las escrituras de la casa.</p>
+        <p class='Arial'> <strong>TIO: </strong> A ver… ¡Ah Caray! ¡esto esta en orden y todo legal!</p>
+        <p class='Arial'> <strong>TIA JUANA: </strong> ¿Cómo le hiciste?</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> No importa cómo, lo importante es que tenemos un nuevo comienzo.</p>
+        <p class='typewriter-font'>Llegan los amigos del Tío</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS HUMANO: </strong> ¡Juana! ¿Estás bien?</p>
+        <p class='Arial'> <strong>TIA JUANA: </strong> Sí, pudimos escondernos a tiempo. ¿Y Tú estás bien?</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS HUMANO: </strong> Si, hice un cálculo rápido de fuerza centrífuga del viento, y de acuerdo al movimiento de rotación y traslación de la tierra en la hora en la que ocurrió decidí que lo mejor era… correr lejos. Y me salvé.</p>
+        <p class='Arial'> <strong>TIA JUANA: </strong> ¡Ay qué bueno que estas bien!</p>
+        <p class='Arial'> <strong>HOJALATA HUMANO: </strong> Margara, ¿tú estás bien?</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> ¡Si! Todo gracias al Yoga, pude hacer algunas contorciones para meternos en los túneles del centro y nos salvamos.</p>
+        <p class='Arial'> <strong>HOJALATA HUMANO: </strong> ¡Ay Margara! Me tenían con el corazón en un hilo… hasta la peda se me bajo… Pero ahorita me emparejo (Se empina la botella).</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Un momento… ¿Espantapajaros? ¿Hojalata?</p>
+        <p class='Arial'> <strong>HOJALATA Y ESPANTAPAJAROS HUMANO: </strong> ¿Qué?</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> Discúlpenla de niña se nos cayó de cabeza, pero ahora creo que el tornado le agravo esa condición…y ahora anda diciendo cosas bien raras.</p>
+        <p class='Arial'> <strong>TIO: </strong> Sí… fumo algo y no lo controlo… ahora será una teporocha más del centro así loquita y gritando cosas.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Pero tío… ¡Animo! (Chifla como el ánimo)</p>
+        <p class='Arial'> <strong>TIO: </strong> Ahora que tenemos una segunda oportunidad de vida… me gustaría confesar algo que seguro les sorprenda… pero esto es un renacer y hay que vivirlo como tal. Margara… amigos. ¡Soy gay! ¡Fiesta fiesta! ¡Pluma pluma gay, pluma pluma, pluma gay!</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS HUMANO: </strong> Ay, eso ya lo sabíamos… pero que bueno que lo aceptas ya.</p>
+        <p class='Arial'> <strong>HOJALATA HUMANO: </strong> Si… ahora será más fácil decirte que tengo una relación con Margara…</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS HUMANO: </strong> Y yo con Juana.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> ¡¿Queeee?! ¿Ósea que todos andaban con todos?</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> Si hija… es algo muy Queretano que entenderás cuando crezcas.</p>
+        <p class='Arial'> <strong>TIO: </strong> ¡Bueno pues ahora que el terreno es nuestro… que les parece si entre todos construimos una casota y vivimos todos juntos!</p>
+        <p class='Arial'> <strong>TIA JUANA: </strong> ¡Claro! Esa es otra gran tradición queretana.</p>
+        <p class='Arial'> <strong>DOROTHEA: </strong> Que bueno que todo salió bien al final, yo por mi cuenta estudiaré ingeniería de Software que es lo de hoy, y algún día entrare a trabajar al corporativo Santander, tendré perrijos y amantes ocasionales, pero como nueva generación no pretendo tener familia, no la necesito para ser feliz, menos ahora que descubrí que el amor son los papás y que todos andan con todos en Querétaro de Kansas.</p>
+        <p class='Arial'> <strong>TIA MARGARA: </strong> Y así gracias a Felifer, todos vivieron Felices en Querétaro ¡para siempre!</p>
+        <p class='Arial'> <strong>ESPANTAPAJAROS HUMANO: </strong> Bueno… hasta donde les alcanzo el agua.</p>
+        
+        <p class='typewriter-font'>Ending con coreografia. Con Over The Rainbow - Israel Kamakawiwo'ole | Versión en Español</p>
+
+           
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suene la cancion de Over The Rainbow</p>
+        <button onclick="playAudio('27 Over The Rainbow - Israel Kamakawiwo en Español.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+
+
+
+
+        <h2 style="color:red;">F I N</h2>
+        
+
+        
+        
+
+
+    </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script>
+        function playAudio(song) {
+            var audio = document.getElementById('audioPlayer');
+            if (audio.src !== song) {
+                audio.src = song;
+            }
+            audio.play();
+        }
+
+        function stopAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.pause();
+            audio.currentTime = 0;
+        }
+
+        function restartAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.currentTime = 0;
+            audio.play();
+        }
+         // Obtener todos los elementos de texto en el cuerpo del documento
+         var textElements = document.body.getElementsByTagName('*');
+        
+        // Obtener todos los elementos de texto en el cuerpo del documento
+        var textElements = document.body.getElementsByTagName('*');
+
+        function hardReload() {
+            window.location.reload(true);
+        }
+
+        function toggleMenu() {
+            const menuButton = document.querySelector('.menu-button');
+            const menuContent = document.getElementById('menuContent');
+            menuButton.classList.toggle('open');
+            menuContent.classList.toggle('open');
+        }
+       
+   
+    </script>
+</body>
+</html>
