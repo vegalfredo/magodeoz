@@ -257,10 +257,14 @@
         <div class="controls">
             
             <br>
-            <p class="typewriter-font">Actualizado al 06/07/2024 a las 00:50 hrs. </p>
+            <p class="typewriter-font">Actualizado al 29/07/2024 a las 16:35 hrs. </p>
             <p style="color:rgb(201, 5, 172);"class="typewriter-font">Opening con Canción Oh Fortuna & Suavecito</p>
             <button onclick="playAudio('01 Openning Fortuna con Suavecito.mp3')">Reproducir</button>
             <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Volumen: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" oninput="changeVolume()">
+
+
         <h2 id="escena_01">♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
         <div class="inline-container">
             <h2>Escena 01 - DOROTHEA Y SU FAMILIA</h2>
@@ -277,15 +281,30 @@
         <p class="Arial"> <strong>DOROTHY:</strong>cerditos, vaquitas, borreguitos… burritos, patitos… 
             ¿Cómo amanecieron el día de hoy? Que bien se ve usted hoy señor pato</p>
         <p class="typewriter-font">Improvisa con el público</p>
-        <p class="Arial"> <strong>DOROTHY:</strong>¿Dónde estarán mis tíos? Normalmente se levantan muy temprano… </p>
-        <p class="typewriter-font">Entra El Tío de Dorothy con canción de “El Rey León Duerme ya” del Rey León.</p>
-        <p class="Arial"> <strong>TÍO:</strong>Abumba wue… abumba wue… en la jungla tan imponente el León Rey duerme ya… en la jungla tan imponente el León Rey duerme,"no los oigo amigos"... ahiiiii… iiiiii abin babambue”</p>
+        <p class="Arial"> <strong>DOROTHY:</strong>¿Dónde estarán mis tíos? Normalmente se levantan muy temprano… </p><br>
+
+        
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Empezar a reproducir pista de "abin baue"</p>
+            <button onclick="playAudio('43 Pista Abun baue Abun Baue.mp3')">Reproducir</button>
+            <button onclick="stopAudio()">Detener</button>
+        
+            <p class="typewriter-font">Entra El Tío de Dorothy con canción de “El Rey León Duerme ya” del Rey León.</p><br>
+               
+        
+            <p class="Arial"> <strong>TÍO:</strong>Abumba wue… abumba wue… en la jungla tan imponente el León Rey duerme ya… en la jungla tan imponente el León Rey duerme,"no los oigo amigos"... ahiiiii… iiiiii abin babambue”</p>
         <a class="typewriter-font">NALGADA</a>
         <p class="Arial"> <strong>TÍO:</strong>¡Qué bien dormí hoy!, buenos días Dorothea… ¡Ay! ¡Qué hambre tengo!… podría comerme una cebra entera…</p>
         <p class="Arial"> <strong>DOROTHY:</strong>Se acabaron las cebras… </p>
         <p class="Arial"> <strong>TÍO:</strong>¿Antílopes? </p>
         <p class="Arial"> <strong>DOROTHY:</strong> Nop… Pero tenemos, ¡gusanos y bichos!, Viscosos pero sabrosos…!!!</p>
-        <p class="Arial"> <strong>TÍO:</strong> “Aggh”, con que tu tía Juana insiste en cocinar eh?....</p>                                                <!-- Dorothy-->
+        <p class="Arial"> <strong>TÍO:</strong> “Aggh”, con que tu tía Juana insiste en cocinar eh? </p>               
+        
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Reproducir "DIVANO" - Leit motiv de Trini"</p>
+            <button onclick="playAudio('44 Divano - Trini entrada.mp3')">Reproducir</button>
+            <button onclick="stopAudio()">Detener</button> <br>
+        <br>
+        
         <p class="Arial"> <strong>TIA MARGARA:</strong> ¡Ay! Buenos días…. No puedo creer que me quede dormida… ya son las 5:10 de la mañana… ya no alcanzare a ir a mi clase de Yoga… ¿Qué me habrá pasado? No dormía tanto desde que me tomaba las gotitas de Rivotril, ¿te acuerdas?</p>                                        <!-- Márgara-->
         <p class="Arial"> <strong>TÍO:</strong>Sí… que extraño… ha de ser la luna… y el mercurio retrogrado… pero no te preocupes con que me hagas de desayunar todo está bien</p><!-- Tío-->
         <p class="Arial"> <strong>TIA MARGARA:</strong>Pero quedamos que ahora tú ibas a hacer el desayuno los fines de semana.</p><!-- Márgara-->
@@ -325,6 +344,13 @@
         <p class="Arial"> <strong>TIO: </strong> Que buena muchacha es esa Dorothea… ¿Entonces quienes era sus papás?</p>
         <p class="Arial"> <strong>TIA JUANA: </strong> ¿Cómo que quién? ¡Pues tú hermano!</p>
         <p class="Arial"> <strong>TIO: </strong> ¡Ah Caray!, ¡¿Se murió mi hermano?!</p> <p class="typewriter-font">Salen.</p>     <!-- Linea de Acotacionesy-->
+
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">TRANSICION Canción del elefantito. DETENERLA MANUALMENTE</p>
+            <button onclick="playAudio('45 EL PASO DEL ELEFANTITO - HENRY MANCINI.mp3')">Reproducir</button>
+            <button onclick="stopAudio()">Detener</button> <br>
+        <br>   
+
 
         <h2 id="escena_02">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br><br>
         <div class="inline-container">
@@ -1800,12 +1826,19 @@
         <p class='Arial'> <strong>DOROTHEA: </strong> Esta bien, esta bien… hay que aprender a ser agradecidos con lo que tenemos. Gracias. Gracias a todos. Vamos Toto… es momento de volver a casa. Gracias a todos… tanta fantasía, me ha dado un buen revés de realidad. ¡Hasta siempre!</p>
         <p class='typewriter-font'>Choca los talones.</p>
         <p class='typewriter-font'>Oscuro. </p>
-
         
         <h2 style="color:red;">F I N</h2>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Reproducir 42 Over The Rainbow_ - Wizard of Oz Metal</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Mientas se presentan los actores</p>
+        <button onclick="playAudio('42 Over The Rainbow_ - Wizard of Oz Metal.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Volumen: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" oninput="changeVolume()">
         
+        <br><br><br>
 
-
+        
     </div>
 
 
@@ -1834,6 +1867,13 @@
             audio.currentTime = 0;
             audio.play();
         }
+
+        function changeVolume() {
+        var audio = document.getElementById('audioPlayer');
+        var volumeControl = document.getElementById('volumeControl');
+        audio.volume = volumeControl.value;
+    }
+
          // Obtener todos los elementos de texto en el cuerpo del documento
          var textElements = document.body.getElementsByTagName('*');
         
