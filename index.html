@@ -182,10 +182,6 @@
     <meta property="og:url" content="https://i.pinimg.com/736x/68/ab/bd/68abbd100048ff05908d77e7118f3e6a.jpg">
 
     
-
-
-    
-    
     <meta property="og:type" content="website">
 
 
@@ -257,12 +253,13 @@
         <div class="controls">
             
             <br>
-            <p class="typewriter-font">Actualizado al 29/07/2024 a las 16:35 hrs. </p>
+            <p class="typewriter-font">Actualizado al 29/07/2024 a las 17:59 hrs. </p>
             <p style="color:rgb(201, 5, 172);"class="typewriter-font">Opening con Canción Oh Fortuna & Suavecito</p>
             <button onclick="playAudio('01 Openning Fortuna con Suavecito.mp3')">Reproducir</button>
             <button onclick="stopAudio()">Detener</button>
-            <label for="volumeControl">Volumen: </label>
-            <input type="range" id="volumeControl" min="0" max="1" step="0.01" oninput="changeVolume()">
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+            
 
 
         <h2 id="escena_01">♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
@@ -270,13 +267,17 @@
             <h2>Escena 01 - DOROTHEA Y SU FAMILIA</h2>
         </div>
         
-        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Entra Dorothy con canción de Anita la Huerfanita</p>
+
+         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Entra Dorothy con canción de Anita la Huerfanita</p>
             <button onclick="playAudio('02 Mañana - Anita la Huerfanita - SOLO MUSICA.mp3')">Reproducir</button>
             <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        
              
         <br>
         <br>
-        <p class="Arial"> <strong>DOROTHY:</strong>Seguro que hay sol mañana, vas a ver que pase lo que pase… sale el sol”. Buenos días señor sol, buenos días pajaritos, buenos días animalitos de la granja…</p>
+        <p class="Arial"> <strong>DOROTHY:</strong>Seguro que hay sol mañana, vas a ver que pase lo que pase… sale el sol. Buenos días señor sol, buenos días pajaritos, buenos días animalitos de la granja…</p>
         <p class="typewriter-font">Al público</p>
         <p class="Arial"> <strong>DOROTHY:</strong>cerditos, vaquitas, borreguitos… burritos, patitos… 
             ¿Cómo amanecieron el día de hoy? Que bien se ve usted hoy señor pato</p>
@@ -288,7 +289,7 @@
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Empezar a reproducir pista de "abin baue"</p>
             <button onclick="playAudio('43 Pista Abun baue Abun Baue.mp3')">Reproducir</button>
             <button onclick="stopAudio()">Detener</button>
-        
+          
             <p class="typewriter-font">Entra El Tío de Dorothy con canción de “El Rey León Duerme ya” del Rey León.</p><br>
                
         
@@ -301,8 +302,10 @@
         <p class="Arial"> <strong>TÍO:</strong> “Aggh”, con que tu tía Juana insiste en cocinar eh? </p>               
         
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Reproducir "DIVANO" - Leit motiv de Trini"</p>
-            <button onclick="playAudio('44 Divano - Trini entrada.mp3')">Reproducir</button>
+            <button onclick="playAudio('44 Divanos - Trini entrada.mp3')">Reproducir</button>
             <button onclick="stopAudio()">Detener</button> <br>
+            
+        
         <br>
         
         <p class="Arial"> <strong>TIA MARGARA:</strong> ¡Ay! Buenos días…. No puedo creer que me quede dormida… ya son las 5:10 de la mañana… ya no alcanzare a ir a mi clase de Yoga… ¿Qué me habrá pasado? No dormía tanto desde que me tomaba las gotitas de Rivotril, ¿te acuerdas?</p>                                        <!-- Márgara-->
@@ -349,6 +352,9 @@
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">TRANSICION Canción del elefantito. DETENERLA MANUALMENTE</p>
             <button onclick="playAudio('45 EL PASO DEL ELEFANTITO - HENRY MANCINI.mp3')">Reproducir</button>
             <button onclick="stopAudio()">Detener</button> <br>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+            
         <br>   
 
 
@@ -409,6 +415,13 @@
 
         <br>
         <p class="Arial"> <strong>PEDRO: </strong> ¡Viene el Lobo! ¡Corran todos! ¡Viene el lobo a comerse a todos!</p>
+        
+        <p class="Arial"> <strong>TODOS: </strong> ¿Pedroooo? </p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">sonido del meme de Pedro Pedro Pedro Pe"</p>
+        <button onclick="playAudio('50 Pedro Pedro Pedro Mapache.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+
+        <p class="Arial"> <strong>PEDRO: </strong> ¡Viene el Lobo! ¡Corran todos! ¡Viene el lobo a comerse a todos!</p>
         <p class="Arial"> <strong>PUEBLO TODOS: </strong> ¡Corran! ¡Corran! ¡AAAAAAHH!</p>
         <p class="Arial"> <strong>ARISTÓCRATA MARIEL: </strong> ¡Mujeres y ancianos primero!</p>
         <p class="Arial"> <strong>PANADERO VEGA: </strong> ¡No! ¡Hay que ser incluyentes!, ¡Los hombres también!</p>
@@ -425,7 +438,7 @@
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido de: "Campana de Iglesia"</p>
         <button onclick="playAudio('04 Sonido de Campana de Iglesia Misa.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
-
+        
         <br>
         <br>
         <p class="Arial"> <strong>ROSARIO: </strong>¡Ay! que olor tan desagradable… huele horrible…</p>
@@ -436,6 +449,8 @@
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido de: "Campana de Iglesia"</p>
         <button onclick="playAudio('04 Sonido de Campana de Iglesia Misa.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
+        
+
         <p class="Arial"> <strong>CLOTILDE: </strong>Oye hay que ir a la Mariposa por algo nuevo…</p>
         <p class="Arial"> <strong>ROSARIO: </strong>¡Si! Se me antoja un volteado de Piña</p>
         <p class="Arial"> <strong>CLOTILDE: </strong>¡¡Ay sí!! ¡Qué delicia!</p>
@@ -470,7 +485,14 @@
         <p class="Arial"> <strong>CLOTILDE: </strong>Pero si quieren por transferencia también se las aceptamos.</p>
         <p class="Arial"> <strong>DOROTHY: </strong>Sí, yo les digo…</p>
         
-        <p class="Arial"> <strong>PEDRO: </strong>¡Viene el COVID!, ¡Corran todos!, ¡Viene el COVID otra vez!</p><br>
+        <p class="Arial"> <strong>PEDRO: </strong>¡Viene el COVID!, ¡Corran todos!, ¡Viene el COVID otra vez!</p>
+        <p class="Arial"> <strong>TODOS: </strong> ¿Pedroooo? </p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">sonido del meme de Pedro Pedro Pedro Pe por SEGUNDA VEZ"</p>
+        <button onclick="playAudio('50 Pedro Pedro Pedro Mapache.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+
+        <p class="Arial"> <strong>PEDRO: </strong>¡Viene el COVID!, ¡Corran todos!, ¡Viene el COVID otra vez!</p>
+
         <p class="Arial"> <strong>PUEBLO TODOS: </strong>¡Corran! ¡Corran! ¡AAAAAAHH!</p>
         <p class="Arial"> <strong>ARISTÓCRATA MARIEL: </strong>¡Mujeres y ancianos primero!</p>
         <p class="Arial"> <strong>PANADERO VEGA: </strong>¡No! ¡Hay que ser incluyentes!, ¡Los hombres también!</p>
@@ -524,6 +546,16 @@
         <p class="Arial"> <strong>PUEBLO TODOS: </strong> Diferente de nosotros eeees…  No es como todos los demás… ¡Muy diferente de nosotros eeeeeees!</p><br>
 
         <p class="Arial"> <strong>PEDRO: </strong>¡Viene un tornado! ¡Corran todos! ¡Viene un tornado!</p>
+        
+        <p class="Arial"> <strong>TODOS: </strong> ¿Pedroooo? </p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">sonido del meme de Pedro Pedro Pedro Pe por TERCERA y última vez"</p>
+        <button onclick="playAudio('51 Pedro pedro que gusto de verte.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+
+        <p class="Arial"> <strong>PEDRO: </strong>¡Viene un tornado! ¡Corran todos! ¡Viene un tornado!</p>
+
+
+
         <p class="Arial"> <strong>PUEBLO TODOS: </strong>No le hagan caso… Pedro siempre nos miente, con sus bromas pesadas.</p>
         <p class="Arial"> <strong>PEDRO: </strong>¡Pero esta vez es real! ¡Ahí viene un tornado! ¡Volteen y lo verán!</p>
         <p class="Arial"> <strong>PUEBLO TODOS: </strong>Si claro, voltearemos y te burlaras de nosotros… ya no caeremos.</p>
@@ -531,6 +563,13 @@
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Efecto sonido de: "Tornado, lluvia, truenos"</p>
         <button onclick="playAudio('05 Efecto Tornado con Truenos Final.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+
+
+
+
+
         <br>
         <br>
         <p class="Arial"> <strong>PEDRO: </strong>¡Pero!.. ¡Aaaahhh!</p>
@@ -543,6 +582,16 @@
         <div class="inline-container">
             <h2>Escena 5 - LOS MUNCHKINS Y  LA MUERTE DE LA BRUJA</h2>
         </div>
+
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Leit Motive de Mushkins "</p>
+        <button onclick="playAudio('46 Leit Motiv de los MUSHKINS.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+
+
+
 
         <p class="Arial"> <strong>MUNCHKINS: </strong> ¡La mato! ¡La mato! ¡La mato!</p>
         <p class="Arial"> <strong>MUSHKIN VEGA: </strong> ¡¡La matastes toda!!</p>
@@ -619,6 +668,16 @@
             <h2>Escena 6 - EL ESPANTAPAJAROS</h2>
         </div>
 
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Pista CON ZAPATOS DE TACON, en el segundo 24 empezar a cantar "</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">bajar volumen MANUAL</p>
+        <button onclick="playAudio('47 karaokanta - Bronco - Con zapatos de tacón.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        <br>
+        <br>
+
+
         <p class='typewriter-font'>ESPANTAPAJAROS atado al poste- Dorothy entra cantando una de Bronco</p>
         <p class='Arial'> <strong>DOROTHY: </strong> “Con zapatos de tacón, las brujas se ven mejor, que con zapatos de piso” </p>
         <p class='typewriter-font'>Voltea y ve al ESPANTAPAJAROS y grita asustada</p>
@@ -664,11 +723,12 @@
         <p class='Arial'> <strong>DOROTHY: </strong> Ahhh artista!!, ¿bueno entonces me acompañas en este viaje? </p>
 
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">comienza la melodía de Song Gary Glitter</p>
-        <button onclick="playAudio('06 Musica del Jocker para Baile ESPANTAPAJAROS.mp3')">Reproducir</button>
+        <button onclick="playAudio('06 Musica del Jocker para Baile Espantapajaros.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
         <br>
-        <br>
-                
+                        
         <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¿Viaje?!!!, va jálo…. </p>
         <p class='typewriter-font'>ESPANTAPAJAROS comienza a bailar como el Jocker  cuando baja las escaleras</p>
         <p class='typewriter-font'>otra fumada a su churrito, se apagan las luces, salen</p>
@@ -678,6 +738,8 @@
         <div class="inline-container">
             <h2>Escena 7 - EL HOJALATA</h2>
         </div>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">continua sonando la melodía del Jocker (Song Gary Glitter) y se va silenciando poco a poco</p>
 
         <p class='typewriter-font'>HOJALATA entra a escena y toma posición</p>
         <p class='typewriter-font'>Entra Dorothy con el ESPANTAPAJAROS cantando la canción de Somewhere over the Rainbow</p>
@@ -711,6 +773,7 @@
         <p class='Arial'> <strong>HOJALATA: </strong> ¡Es que ella me ROMPIÓ el corazón! </p>
         
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">comienza la canción de: Ay ME ROBO EL CORAZÓN</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">la cancion se termina solita</p>
         <button onclick="playAudio('07 Ay Me rompió el corazón el lloron (PARTE).mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
         <br>
@@ -735,6 +798,15 @@
         <div class="inline-container">
             <h2>Escena 8 - EL LEÓN</h2>
         </div>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">comienza SONIDO BOSQUE ENCANTADO</p>
+        <button onclick="playAudio('48 fondo bosque embrujado ESCENA LEON.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Bajar volumen manual pero dejar terminar dura 1 minuto</p>
+        <br>
+        <br>
 
 
         <p class='typewriter-font'>Dorothy, ESPANTAPAJAROS y el HOJALATA van siguiendo el camino amarillo...</p>
@@ -794,7 +866,7 @@
         <p class='Arial'> <strong>LEON: </strong> ¡Perfecto! Con coraje y valor seré más eficiente para asaltar, autobuses, peatones, robo a domicilios y negocios… </p>
         <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> ¡No! Coraje y Valor para enfrentar la vida de forma decente, consiguiendo un trabajo honrado… </p>
         <p class='Arial'> <strong>HOJALATA: </strong> Una familia… Leoncitos y una Leona. </p>
-        <p class='Arial'> <strong>LEON: </strong> Leona? Dijiste….”Leona?” </p>
+        <p class='Arial'> <strong>LEON: </strong> Leona? Dijiste, ”¿Leona?” </p>
 
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Música de "Reyna Leona" de Steman y TODOS bailamos la coreografía del siguiente video al mismo tiempo que suena</p>
         <p class='typewriter-font'>ENSAYAR LOS PASOS SOLO DOROTHY, HOJALATA, ESPANTAPAJAROS Y LEON</p>
@@ -828,6 +900,8 @@
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">comienza la melodía de los casacas rojas</p>
         <button onclick="playAudio('33 The British Grenadiers -Chip y Chop.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
         <br>
         <br>
 
@@ -868,6 +942,8 @@
         <p class='typewriter-font'>Llegan Dorothy, León, Hojalata y ESPANTAPAJAROS a Ciudad Esmeralda</p>
         <button onclick="playAudio('16 Single Ladies Fragmento editado.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
         <br>
         <br>
         
@@ -896,6 +972,17 @@
         <p class='Arial'> <strong>CHOP: </strong> ¡Se volvieron a mover las estatuas! </p>
         <p class='Arial'> <strong>CHIP: </strong> ¡No son estatuas! Son… </p>
         <p class='Arial'> <strong>CHIP y CHOP: </strong> ¡Intrusos! </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sonido de MARIO BROSS cuando toma la ESTRELLA </p>
+        <p class='typewriter-font'>Llegan Dorothy, León, Hojalata y ESPANTAPAJAROS a Ciudad Esmeralda</p>
+        <button onclick="playAudio('49 Super Mario Bros - sonido estrella.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        <br>
+        <br>
+
+
         <p class='Arial'> <strong>LEÓN: </strong> ¡Ya nos cayó la voladora! </p>
         <p class='typewriter-font'>Intentan escapar, pero los guardias los atrapan</p><br>
         <p class='Arial'> <strong>CHOP: </strong> ¿A dónde creen que van sin permiso? </p>
@@ -944,6 +1031,17 @@
         <p class='Arial'> <strong>CHOP: </strong>  Adelante por favor. </p>
         <p class='typewriter-font'>Pasa el león</p>
         <p class='Arial'> <strong>CHIP: </strong> Y además de ascendencia étnica… pásenle por favor, que orgullo... </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Reproducir música de transicion de Harry Potter </p>
+        
+        <button onclick="playAudio('52 Harry Potter Theme Remix.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        <br>
+        <br>
+
+
         <p class='typewriter-font'>Pasa el HOJALATA</p>
         <p class='Arial'> <strong>CHOP: </strong> ¿Y tú porqué tan descorazonado? Échele ganas  </p>
         <p class='typewriter-font'>Pasa Dorothy dando saltitos</p>
@@ -966,6 +1064,14 @@
         <div class="inline-container">
             <h2>Escena 11 - SALA DE ESPERA</h2>
         </div>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sigue sonando la  música de transicion de Harry Potter </p>
+        <button onclick="playAudio('52 Harry Potter Theme Remix.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        <br>
+        <br>
 
         <p class='typewriter-font'>Llegan Dorothy, León, Hojalata y ESPANTAPAJAROS a la sala de espera y ven a un maniquí</p>
         <p class='Arial'> <strong>DOROTHY: </strong> ¡Qué bueno que sí nos dejaron entrar! </p>
@@ -1064,8 +1170,11 @@
 
 
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena melodía de boda, que a los 10 SEGUNDOS EXACTAMENTE el mago interrumpe con voz muy GRAVE</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Dejar correr el audio, se desvanece solito o pueden silenciarlo grandualmente de manera manual</p>
         <button onclick="playAudio('12 Entrada increíble del Mago de Oz.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
         <br>
 
 
@@ -1103,6 +1212,12 @@
         <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Una misión suicida… </p>
         <p class='Arial'> <strong>LEÓN: </strong> ¡Ya dinos cuál es! </p>
         <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Robar a la malvada Bruja del Oeste… ¡Su escoba Mágica! </p>
+
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Sonido efecto FATALIDAD</p>
+        <button onclick="playAudio('53 Sonido Cha cha Chaaaaaaaaan.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <br>
+
         <p class='Arial'> <strong>TODOS MENOS DOROTHY </strong> ¡Oh Dios no! ¡El Horror! ¡Imposible!¡Qué espanto!, ¡No, no se puede! </p>
         <p class='Arial'> <strong>DOROTHY: </strong> Esta bien. ¡Lo haremos! </p>
         <p class='Arial'> <strong>LEÓN: </strong> ¿Estás loca?</p>
@@ -1129,18 +1244,23 @@
         <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Perdón… estaba jugando Fornite con los guardias. ¿Qué paso? </p>
         <p class='Arial'> <strong>DOROTHY: </strong> Que aceptamos el trato… ¡Iremos por la Escoba de la Bruja mala de Oeste! </p>
         <p class='Arial'> <strong>VOZ EN OFF MAGO DE OZ: </strong> Muy bien, cuando regresen aquí estaré esperándolos para cumplir sus deseos. </p>
-        <p class='typewriter-font'>Salen</p>
-
-
+        <p class='Arial'> <strong>SIRIEXA: </strong> La llamada con el Gran Mago ha terminado… si quiere volver a llamar favor de traer una escoba Mágica. </p>
+        
         <h2 id="escena_13">♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br><br>
         <div class="inline-container">
             <h2>Escena 13 - LA BENDICION DE LAS HADAS</h2>
         </div>
 
 
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena MÚSICA DE ROCKY BALBOA</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Bajar volumen manualmente </p>
+        <button onclick="playAudio('54 Rocky Balboa - Fragmento.mp3')">Reproducir</button>
+        <button onclick="stopAudio()">Detener</button>
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        <br>
 
-
-        <p class='Arial'> <strong>SIRIEXA: </strong> La llamada con el Gran Mago ha terminado… si quiere volver a llamar favor de traer una escoba Mágica. </p>
+        
         <p class='Arial'> <strong>DOROTHY: </strong> Bueno… ¿y que ruta tomamos para llegar con la Bruja Malvada del Oeste? </p>
         <p class='Arial'> <strong>HOJALATA: </strong> Dorothea… ¿estás segura de esto? La Bruja Malvada del Oeste… es muy Bruja!!! </p>
         <p class='Arial'> <strong>LEON: </strong> y muy Malvada!!! </p>
@@ -1150,6 +1270,7 @@
         <p class='typewriter-font'>Entran las Hadas</p>
 
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena melodía mágica de HADAS</p>
+
         <button onclick="playAudio('32 Magic bells - sound effect.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
         <br>
@@ -1167,10 +1288,14 @@
         <p class='Arial'> <strong>LEÓN: </strong> ¿Por qué no? </p>
         <p class='Arial'> <strong>HOJALATA: </strong> Porque… porque… </p>
         
-        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena la pista de "ESTA COBARDIA”</p>
+        <p style="color:rgb(201, 5, 172);"class="typewriter-font">Suena la pista de "ESTA COBARDIA”, dejar terminar el audio </p>
+
+        
         <p class='typewriter-font'>Hojala Canta junto con la pista, tipo playback</p>
         <button onclick="playAudio('13 ESTA COBARDIA para HOJALATA.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
+
+        <p style="color:rgb(5, 167, 48);"class='typewriter-font'> <strong> Trini se sube en las rodillas de Angy y Vega, !QUE NO SE NOS CAIGA DIOSITO!</strong> </p>
         <p class='typewriter-font'>“Esta cobardía de mi amor por ella, hace que la vea igual que a una estrella, tan lejos, tan lejos en la inmensidad… que no espero nunca poderla alcanzar” </p>
         <br>
         <br>
@@ -1679,17 +1804,16 @@
         <p class='Arial'> <strong>ESPANTAPAJAROS: </strong> Ósea que eres zurdo…</p>
         <p class='Arial'> <strong>LEÓN: </strong> ¡Noooo! ¡Soy Marica!</p>
         <p class='typewriter-font'>EXACTAMENTE EN ESE MOMENTO empieza a sonar la canción:"Los Morancos_ Pluma pluma Gay"</p>
-        <p class='typewriter-font'>DETENER LA CANCION EXACTAMENTE EN: 00:01:45 </p>
-
+        <p class='typewriter-font'>Dejar terminar el video y hacer el playback</p>
 
         <video width="450" controls>
-            <source src="PLUMA PLUMA GAY _ Los Morancos.mp4" type="video/mp4">
+            <source src="55 PLUMA PLUMA GAY _ Los Morancos.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de videos.
         </video><br><br>
 
+        <p class='typewriter-font'>CantaHojalata, Espantapájaros y León, hasta 00:01:45  </p>
 
-        <p class='Arial'> <strong>RE ESCRIBIENDO LOS DIALOGOS DE ESTA PARTE </strong></p>
-        <p class='Arial'> <strong>RE ESCRIBIENDO LOS DIALOGOS DE ESTA PARTE </strong></p>
+        
         <p class='Arial'> <strong>LEON :</strong> "Soy gaaaaaaay!!!!"</p><BR>
 
         <p class='Arial'> <strong>DOROTHEA:</strong> Si, si… ya todos lo sabíamos león. ¿Pero y que va a pasar con mi casa? Quiero regresar con mis tíos. A mi hermoso aunque incongruente, caluroso, sin luz y sin agua Querétarock.</p>
@@ -1831,10 +1955,15 @@
 
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Reproducir 42 Over The Rainbow_ - Wizard of Oz Metal</p>
         <p style="color:rgb(201, 5, 172);"class="typewriter-font">Mientas se presentan los actores</p>
+
+        
         <button onclick="playAudio('42 Over The Rainbow_ - Wizard of Oz Metal.mp3')">Reproducir</button>
         <button onclick="stopAudio()">Detener</button>
-        <label for="volumeControl">Volumen: </label>
-        <input type="range" id="volumeControl" min="0" max="1" step="0.01" oninput="changeVolume()">
+        <label for="volumeControl">Vol: </label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+
+
+        
         
         <br><br><br>
 
@@ -1860,25 +1989,34 @@
             var audio = document.getElementById('audioPlayer');
             audio.pause();
             audio.currentTime = 0;
+            setVolume(0.5);  // Restablece el volumen a 50%
+            document.getElementById('volumeControl').value = 0.5;  // Actualiza el control deslizante
         }
+
 
         function restartAudio() {
             var audio = document.getElementById('audioPlayer');
             audio.currentTime = 0;
             audio.play();
+            setVolume(0.5);  // Restablece el volumen a 50%
+            document.getElementById('volumeControl').value = 0.5;  // Actualiza el control deslizante
         }
 
-        function changeVolume() {
-        var audio = document.getElementById('audioPlayer');
-        var volumeControl = document.getElementById('volumeControl');
-        audio.volume = volumeControl.value;
-    }
+        function setVolume(volume) {
+            var audio = document.getElementById('audioPlayer');
+            audio.volume = volume;
+        }
 
-         // Obtener todos los elementos de texto en el cuerpo del documento
-         var textElements = document.body.getElementsByTagName('*');
+
+
+
         
         // Obtener todos los elementos de texto en el cuerpo del documento
         var textElements = document.body.getElementsByTagName('*');
+        
+        // Obtener todos los elementos de texto en el cuerpo del documento
+        var textElements = document.body.getElementsByTagName('*');
+        
 
         function hardReload() {
             window.location.reload(true);
